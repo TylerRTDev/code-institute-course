@@ -14,7 +14,7 @@
         
         body {
             margin: 0;
-            font-family: Oswald, sans-serif;
+            font-family: oswald, sans-serif;
             background-color: #f5f5f5;
             color: #333;
             overflow-x: hidden;
@@ -41,7 +41,7 @@
             font-style: oblique 60deg;
             margin: 0px;
         }
-        .menu-toggle {
+        .menu-btn {
             background-color: white;
             position: fixed;
             top: 2%;
@@ -206,12 +206,12 @@
 <body>
     <header>
         <h1 id="logo"><a href="index.html"></a>Pump Fitness</h1>
-        <button class="menu-toggle"><img src="misc/menu.png" alt="menu-button"></button>
-        <button class="login"><img src="misc/login.png" alt="login-button"><a href="login.html"></a></button>
+        <button class="menu-btn"><img src="Misc/menu.png" alt="menu-btn"></button>
+        <button class="login"><img src="Misc/login.png" alt="login-btn"><a href="login.html"></a></button>
     </header>
     
     <nav id="side-menu">
-        <button class="close-btn" id="close-menu-btn"><img src="misc/close.png" alt="close-button"></button>
+        <button class="close-btn"><img src="Misc/close.png" alt="close-menu-btn"></button>
         <div id="side-menu-bar" class="sidebar">
             <ul class="menu">
                 <li><a href="#">Home</a></li>
@@ -238,12 +238,12 @@
 
     <div class="social-links">
         <span>More Pump Here: | </span>
-        <a href="https://www.facebook.com" target="_blank" rel="noopener"><img src="misc/facebook.png" alt="Facebook"></a> |
-        <a href="https://www.youtube.com" target="_blank" rel="noopener"><img src="misc/youtube.png" alt="YouTube"></a> |
-        <a href="https://www.instagram.com" target="_blank" rel="noopener"><img src="misc/instagram.png" alt="Instagram"></a> |
-        <a href="https://www.twitter.com" target="_blank" rel="noopener"><img src="misc/twitter-alt.png" alt="Twitter"></a> |
-        <a href="https://www.tiktok.com" target="_blank" rel="noopener"><img src="misc/tik-tok.png" alt="TikTok"></a> |
-        <a href="https://www.snapchat.com" target="_blank" rel="noopener"><img src="misc/snapchat.png" alt="Snapchat"></a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener"><img src="Misc/facebook.png" alt="Facebook"></a> |
+        <a href="https://www.youtube.com" target="_blank" rel="noopener"><img src="Misc/youtube.png" alt="YouTube"></a> |
+        <a href="https://www.instagram.com" target="_blank" rel="noopener"><img src="Misc/instagram.png" alt="Instagram"></a> |
+        <a href="https://www.twitter.com" target="_blank" rel="noopener"><img src="Misc/twitter-alt.png" alt="Twitter"></a> |
+        <a href="https://www.tiktok.com" target="_blank" rel="noopener"><img src="Misc/tik-tok.png" alt="TikTok"></a> |
+        <a href="https://www.snapchat.com" target="_blank" rel="noopener"><img src="Misc/snapchat.png" alt="Snapchat"></a>
     </div>
 
     <footer>
@@ -253,10 +253,10 @@
     </footer>
 
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.menu-btn').addEventListener('click', function() {
             document.getElementById('side-menu').classList.toggle('open');
         });
-        document.getElementById('close-menu-btn').addEventListener('click', function() {
+        document.querySelector('.close-btn').addEventListener('click', function() {
             document.getElementById('side-menu').classList.remove('open');
         });
     </script>
