@@ -71,7 +71,7 @@
             left: -250px;
             width: 250px;
             height: 100%;
-            background-color: #ffffff;
+            background-color: #444;
             overflow-y: auto;
             transition: left 0.3s;
             z-index: 1050;
@@ -87,8 +87,7 @@
             text-align: center;
         }
         nav ul li a {
-            text-transform: capitalize;
-            color: rgb(0, 0, 0);
+            color: white;
             text-decoration: none;
             font-size: 1.2em;
             display: block;
@@ -100,78 +99,14 @@
         nav.open {
             left: 0;
         }
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1.5em;
-            color: white;
-        }
-
-        .close-btn img {
-            width: 30px;
-            height: 30px;
-        }
-
         section {
             position: relative;
             text-align: center;
-            color: rgb(0, 0, 0);
+            color: white;
             height: 100vh;
             overflow: hidden;
             padding-top: 120px;
             padding-bottom: 80px;
-        }
-
-        video {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            transform: translate(-50%, -50%);
-            background-size: cover;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.57);
-        }
-        section .text {
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        /*
-        section .text h2 {
-            font-size: 1.5em;
-            margin: 0;
-        }
-        section .text h3 {
-            font-size: 4em;
-            margin: 10px 0;
-        }
-        */
-        section button {
-            background-color: #f65454;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1em;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        section button:hover {
-            background-color: #0cd64c;
         }
 
         .social-links {
@@ -210,7 +145,7 @@
         <button class="login"><img src="misc/login.png" alt="login-button"><a href="login.html"></a></button>
     </header>
     
-    <nav id="side-menu">
+    <nav>
         <button class="close-btn" id="close-menu-btn"><img src="misc/close.png" alt="close-button"></button>
         <div id="side-menu-bar" class="sidebar">
             <ul class="menu">
@@ -218,22 +153,13 @@
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Membership</a></li>
                 <li><a href="#">Contact Us</a></li>
-                <li class="tym"><a href="#">Test Your Might!</a></li>
+                <li><a href="#">Test Your Might!</a></li>
             </ul>
         </div>
     </nav>
 
-    
-    <!-- <div class="overlay">
-        <video src="misc/gym_video.mp4" muted loop autoplay></video>
-    </div> -->
-
     <section>
-        <div class="text">
-            <h2>You Will Feel</h2>
-            <h3>The Pump</h3>
-            <button type="submit"><strong>The Pump is Here!</strong></button>
-        </div>
+        
     </section>
 
     <div class="social-links">
@@ -255,9 +181,6 @@
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.getElementById('side-menu').classList.toggle('open');
-        });
-        document.getElementById('close-menu-btn').addEventListener('click', function() {
-            document.getElementById('side-menu').classList.remove('open');
         });
     </script>
 </body>
