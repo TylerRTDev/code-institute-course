@@ -71,7 +71,7 @@
             left: -250px;
             width: 250px;
             height: 100%;
-            background-color: #444;
+            background-color: #ffffff;
             overflow-y: auto;
             transition: left 0.3s;
             z-index: 1050;
@@ -87,7 +87,8 @@
             text-align: center;
         }
         nav ul li a {
-            color: white;
+            text-transform: capitalize;
+            color: rgb(0, 0, 0);
             text-decoration: none;
             font-size: 1.2em;
             display: block;
@@ -99,10 +100,26 @@
         nav.open {
             left: 0;
         }
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5em;
+            color: white;
+        }
+
+        .close-btn img {
+            width: 30px;
+            height: 30px;
+        }
+
         section {
             position: relative;
             text-align: center;
-            color: white;
+            color: rgb(0, 0, 0);
             height: 100vh;
             overflow: hidden;
             padding-top: 120px;
@@ -194,12 +211,14 @@
     </header>
     
     <nav id="side-menu">
+        <button class="close-btn" id="close-menu-btn"><img src="misc/close.png" alt="close-button"></button>
         <div id="side-menu-bar" class="sidebar">
             <ul class="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Membership</a></li>
                 <li><a href="#">Contact Us</a></li>
+                <li class="tym"><a href="#">Test Your Might!</a></li>
             </ul>
         </div>
     </nav>
@@ -236,6 +255,9 @@
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.getElementById('side-menu').classList.toggle('open');
+        });
+        document.getElementById('close-menu-btn').addEventListener('click', function() {
+            document.getElementById('side-menu').classList.remove('open');
         });
     </script>
 </body>
