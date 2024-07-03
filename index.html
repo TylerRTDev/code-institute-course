@@ -9,9 +9,11 @@
     <title>Pump Fitness Gym | A Fitness Community</title>
     <link href="style.css" rel="stylesheet" type="text/css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: Oswald, sans-serif;
             background-color: #f5f5f5;
             color: #333;
             overflow-x: hidden;
@@ -26,6 +28,12 @@
             top: 0;
             z-index: 1000;
         }
+
+        #home img {
+            width: 30px;
+            height: 30px;
+        }
+
         .logo {
             font-size: 2.5em;
             margin: 0;
@@ -40,7 +48,6 @@
             padding: 10px 15px;
             cursor: pointer;
             border: none;
-            font-size: 1.2em;
             border-radius: 5px;
         }
         nav {
@@ -86,13 +93,8 @@
             padding-top: 120px;
             padding-bottom: 80px;
         }
+
         video {
-            width: fit-content;
-            height: fit-content;
-
-        }
-
-        section video {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -103,7 +105,7 @@
             transform: translate(-50%, -50%);
             background-size: cover;
         }
-        section .overlay {
+        .overlay {
             position: absolute;
             top: 0;
             left: 0;
@@ -116,6 +118,7 @@
             top: 50%;
             transform: translateY(-50%);
         }
+        /*
         section .text h2 {
             font-size: 1.5em;
             margin: 0;
@@ -124,6 +127,7 @@
             font-size: 4em;
             margin: 10px 0;
         }
+        */
         section button {
             background-color: #ff4500;
             color: white;
@@ -163,6 +167,7 @@
         }
     </style>
 </head>
+
 <body>
     <header id="home">
         <h1 class="logo">Pump Fitness</h1>
@@ -180,9 +185,12 @@
         </div>
     </nav>
 
-    <section>
+    
+    <div class="overlay">
         <video src="misc/gym_video.mp4" muted loop autoplay></video>
-        <div class="overlay"></div>
+    </div>
+
+    <section>
         <div class="text">
             <h2>You Will Feel</h2>
             <h3>The Pump</h3>
