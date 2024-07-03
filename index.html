@@ -19,13 +19,13 @@
             overflow-x: hidden;
         }
         header {
-            background-color: #333;
-            padding: 20px;
+            padding: 0% 0%;
+            background-color: #ffffff;
             text-align: center;
-            color: white;
+            color: rgb(0, 0, 0);
             position: fixed;
-            width: 100%;
             top: 0;
+            width: 100%;
             z-index: 1000;
         }
 
@@ -34,19 +34,18 @@
             height: 30px;
         }
 
-        .logo {
-            font-size: 2.5em;
-            margin: 0;
+        h1 {
+            font-size: 3em;
+            font-style: oblique 60deg;
+            margin: 0px;
         }
         .menu-toggle {
             position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 1100;
-            background-color: #444;
+            top: 30px;
+            left: 10px;
+            z-index: 2200;
             color: white;
-            padding: 10px 15px;
-            cursor: pointer;
+            cursor: grabbing;
             border: none;
             border-radius: 5px;
         }
@@ -95,7 +94,7 @@
         }
 
         video {
-            position: absolute;
+            position: fixed;
             top: 50%;
             left: 50%;
             min-width: 100%;
@@ -129,7 +128,7 @@
         }
         */
         section button {
-            background-color: #ff4500;
+            background-color: #f65454;
             color: white;
             border: none;
             padding: 15px 30px;
@@ -142,10 +141,11 @@
             background-color: #ff5722;
         }
         .social {
-            display: flex;
+            display: block;
             justify-content: center;
-            padding: 20px 0;
-            background-color: #333;
+            padding: 10px 0;
+            background-color: #ffffff;
+            z-index: auto;
         }
         .social li {
             list-style: none;
@@ -157,20 +157,20 @@
         }
         footer {
             text-align: center;
-            padding: 10px 0;
-            background-color: #444;
+            padding: 0% 0%;
+            background-color: #000000;
             color: white;
             position: fixed;
             width: 100%;
             bottom: 0;
-            z-index: 1000;
+            z-index: auto;
         }
     </style>
 </head>
 
 <body>
     <header id="home">
-        <h1 class="logo">Pump Fitness</h1>
+        <span><h1 id="logo">Pump Fitness</h1></span>
         <button class="menu-toggle"><img src="misc/menu.png" alt="menu-button"></button>
     </header>
     
@@ -198,15 +198,16 @@
         </div>
     </section>
 
+    <ul class="social">
+        <li><a href="https://www.facebook.com" target="_blank" rel="noopener"><img src="misc/facebook.png" alt="Facebook"></a></li>
+        <li><a href="https://www.youtube.com" target="_blank" rel="noopener"><img src="misc/youtube.png" alt="YouTube"></a></li>
+        <li><a href="https://www.instagram.com" target="_blank" rel="noopener"><img src="misc/instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://www.twitter.com" target="_blank" rel="noopener"><img src="misc/twitter-alt.png" alt="Twitter"></a></li>
+        <li><a href="https://www.tiktok.com" target="_blank" rel="noopener"><img src="misc/tik-tok.png" alt="TikTok"></a></li>
+        <li><a href="https://www.snapchat.com" target="_blank" rel="noopener"><img src="misc/snapchat.png" alt="Snapchat"></a></li>
+    </ul>
+    
     <footer>
-        <ul class="social">
-            <li><a href="https://www.facebook.com" target="_blank" rel="noopener"><img src="misc/facebook.png" alt="Facebook"></a></li>
-            <li><a href="https://www.youtube.com" target="_blank" rel="noopener"><img src="misc/youtube.png" alt="YouTube"></a></li>
-            <li><a href="https://www.instagram.com" target="_blank" rel="noopener"><img src="misc/instagram.png" alt="Instagram"></a></li>
-            <li><a href="https://www.twitter.com" target="_blank" rel="noopener"><img src="misc/twitter-alt.png" alt="Twitter"></a></li>
-            <li><a href="https://www.tiktok.com" target="_blank" rel="noopener"><img src="misc/tik-tok.png" alt="TikTok"></a></li>
-            <li><a href="https://www.snapchat.com" target="_blank" rel="noopener"><img src="misc/snapchat.png" alt="Snapchat"></a></li>
-        </ul>
         <p>Copyright © Pump Fitness Gym LTD 2024</p>
     </footer>
 
