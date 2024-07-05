@@ -238,64 +238,9 @@
             position: relative;
             text-align: center;
             color: rgb(0, 0, 0);
-            height: 100vh;
-            overflow: hidden;
+            height: 670px;
             padding-top: 120px;
-            padding-bottom: 80px;
-        }
-
-        video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            transform: translate(-50%, -50%);
-            background-size: cover;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.665);
-        }
-
-        section .text {
-            text-transform: uppercase;
-            font-style: oblique 60deg;
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        
-        section .text h3 {
-            font-stretch: extra-expanded;
-            font-size: 1.5em;
-            margin: 0px;
-        }
-        section .text h1 {
-            letter-spacing: -10px;
-            font-size: 10em;
-            line-height: 85%;
-            margin: 0px;
-        }
-        
-        section button {
-            background-color: #f65454;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1em;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        section button:hover {
-            background-color: #0cd64c;
+            padding-bottom: 8px;
         }
 
         .social-links {
@@ -399,51 +344,34 @@
                     </div>
                 </form>
         </div>
-
     </div>
-    </div>
-
     <section>
-        <div class="overlay">
-            <video src="Misc/gym_video.mp4" autoplay muted loop></video>
-        </div>
-        <div class="text">
-            <h3>Are You Ready To Feel</h3>
-            <h1>The Pump</h1>
-            <button type="submit"><strong>The Pump is Here!</strong></button>
-        </div>
-    </section>
-
-    <div class="newsletter-container" id="newsletter-container-id">
-        <label for="newsletter-email">Sign Up For Our News Letter: </label>
-        <span>
-            <input id="newsletter-email" name="newsletter" type="email" placeholder="Email Here" type="submit">
-        </span>
-    </div>
-
-    <section class="mid-container">
         <div>
             <div>
-                <h1>Pump Fitness Family</h1>
-            </div>
-            <div>
-                Welcome to Pump Fitness Gym, where your fitness journey becomes a lifestyle. Nestled in the heart of London, our state-of-the-art facility offers a dynamic and supportive environment for individuals of all fitness levels. At Pump Fitness, we believe in empowering our members through personalized training programs, diverse group classes, and a vibrant community that inspires and motivates. Our team of experienced trainers is dedicated to helping you achieve your health and fitness goals, providing expert guidance and encouragement every step of the way. Join us and become part of a fitness community that values strength, wellness, and camaraderie. Let's pump up your fitness journey together!
-            </div>
-            <div>
-                <h1>The Pump</h1>
+                <form method="POST" action="https://formdump.codeinstitue.net/" id="contact-form">
+                    <div>
+                        <legend>Contact Us:</legend>
+                    </div>
+                    <div>
+                        <label for="reg-name">Full Name:</label>
+                        <input id="reg-name" name="name" type="text" required placeholder="Full Name">
+                    </div>
+                    <div>
+                        <label for="reg-email">E-mail Address:</label>
+                        <input id="reg-email" name="email" type="email" required placeholder="E-Mail">
+                    </div>
+                    <div>
+                        <label for="message">Your Message:</label>
+                        <textarea class="message-form" name="message" id="message" placeholder=""></textarea>
+                    </div>
+                    <div>
+                        <button type="submit">Send</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
-
-    <section>
-        <!-- <div class="overlay"></div> -->
-            <div class="text">
-                <h3>Are You Ready To Feel</h3>
-                <h1>The Pump</h1>
-                <button type="submit"><strong>The Pump is Here!</strong></button>
-            </div>
-    </section>
-
+    
     <div class="social-links">
         <span>More Pump Here: | </span>
         <a href="https://www.facebook.com" target="_blank" rel="noopener"><img src="Misc/facebook.png" alt="Facebook"></a> |
