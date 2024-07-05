@@ -14,7 +14,7 @@
         
         body {
             margin: 0;
-            font-family: oswald, sans-serif;
+            font-family: Oswald, sans-serif;
             background-color: #f5f5f5;
             color: #333;
             overflow-x: hidden;
@@ -24,6 +24,7 @@
         header {
             padding: 0% 0%;
             background-color: #ffffff;
+            letter-spacing: -3px;
             text-align: center;
             color: rgb(0, 0, 0);
             position: fixed;
@@ -79,7 +80,7 @@
         }
 
         .right-close-btn {
-            left: 20px;
+            right: 20px;
         }
 
         .menu-btn, .login-btn {
@@ -102,17 +103,11 @@
             color: white;
         }
 
-        .close-btn, .right-close-btn {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1.5em;
-            color: white;
+        /*---Close button size---*/
+        .right-close-btn img {
+            width: 30px;
+            height: 30px;
         }
-
         .close-btn img {
             width: 30px;
             height: 30px;
@@ -136,20 +131,21 @@
             transition: left 0.3s;
             z-index: 1050;
             padding-top: 80px;
+            
         }
 
         .right-side {
             position: fixed;
             top: 0px;
-            right: -500px;
-            width: 500px;
-            height: 30%;
+            right: -300px;
+            width: 300px;
+            height: 100%;
             background-color: #ffffff;
             overflow-y: clip;
             transition: right 0.3s;
             z-index: 1050;
-            padding-top: 80px;
-            border: #000000;
+            padding-top: 70px;
+            border-left: 1px solid #ccc;
         }
 
         nav.open {
@@ -160,17 +156,21 @@
             right: 0;
         }
 
-        nav ul, .login-side-bar form {
+        nav ul, .login-sidebar form {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-        nav ul li,.login-side-bar form div {
+
+        nav ul li a, .login-sidebar label {
+            text-transform: uppercase;
+        }
+
+        nav ul li,.login-sidebar form div {
             margin: 20px 0;
             text-align: center;
         }
         nav ul li a, .login-sidebar input, .login-sidebar button {
-            text-transform: capitalize;
             color: rgb(0, 0, 0);
             text-decoration: none;
             font-size: 1.2em;
@@ -179,6 +179,40 @@
         }
         nav ul li a:hover, .login-sidebar button:hover {
             background-color: #ec4c4c;
+        }
+
+        .login-sidebar form legend {
+            font-size: 3em;
+            text-transform: uppercase; 
+            font-style: oblique 60deg;
+            margin: 0px;
+            color: #000000;
+        }
+
+        .login-sidebar input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px auto;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-sidebar button {
+            width: 40%;
+            padding: 5px ;
+            margin: 30px auto;
+            display: block;
+            border: none;
+            border-radius: 50px;
+            background-color: #f65454;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+            text-transform: uppercase;
         }
 
         section {
@@ -192,7 +226,7 @@
         }
 
         video {
-            position: fixed;
+            position: absolute;
             top: 50%;
             left: 50%;
             min-width: 100%;
@@ -203,28 +237,34 @@
             background-size: cover;
         }
         .overlay {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.57);
+            background: rgba(0, 0, 0, 0.665);
         }
+
         section .text {
+            text-transform: uppercase;
+            font-style: oblique 60deg;
             position: relative;
             top: 50%;
             transform: translateY(-50%);
         }
-        /*
-        section .text h2 {
-            font-size: 1.5em;
-            margin: 0;
-        }
+        
         section .text h3 {
-            font-size: 4em;
-            margin: 10px 0;
+            font-stretch: extra-expanded;
+            font-size: 1.5em;
+            margin: 0px;
         }
-        */
+        section .text h1 {
+            letter-spacing: -10px;
+            font-size: 10em;
+            line-height: 85%;
+            margin: 0px;
+        }
+        
         section button {
             background-color: #f65454;
             color: white;
@@ -293,6 +333,9 @@
         <div id="login-side-menu-bar" class="login-sidebar">
                 <form method="POST" action="https://formdump.codeinstitue.net/">
                     <div>
+                        <legend>Login:</legend>
+                    </div>
+                    <div>
                         <label for="email">Email Address:</label>
                         <input id="email" name="email" type="email" required>
                     </div>
@@ -301,23 +344,25 @@
                         <input id="password" name="password" type="password" required>
                     </div>
                     <div>
-                        <button type="submit">Login</button>
+                        <button type="submit">Enter</button>
                     </div>
                 </form>
         </div>
     </div>
     
+    <div class="top-div">
 
-    
-    
+    </div>
+
+
     <!-- <div class="overlay">
-        <video src="misc/gym_video.mp4" muted loop autoplay></video>
+        
     </div> -->
 
     <section>
         <div class="text">
-            <h2>You Will Feel</h2>
-            <h3>The Pump</h3>
+            <h3>Are You Ready To Feel</h3>
+            <h1>The Pump</h1>
             <button type="submit"><strong>The Pump is Here!</strong></button>
         </div>
     </section>
