@@ -184,7 +184,6 @@
         .login-sidebar form legend {
             font-size: 3em;
             text-transform: uppercase; 
-            font-style: oblique 60deg;
             margin: 0px;
             color: #000000;
         }
@@ -192,11 +191,37 @@
         .login-sidebar input {
             width: 80%;
             padding: 10px;
-            margin: 10px auto;
+            margin: 10px;
             display: block;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .newsletter-container{
+            margin: auto;
+            text-align: center;
+            text-transform: uppercase;
+            font-style: oblique 60deg;
+            background-color: #ec4c4c;
+            font-size: 1.5em;
+        }
+
+        span {
+            width: 12%;
+            padding: 10px;
+            display: inline;
+        }
+
+        #newsletter-email {
+            width: 12%;
+            top: 10px;
+            padding: 10px;
+            display: inline;
+            margin: 10px auto;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .login-sidebar button {
@@ -237,7 +262,7 @@
             background-size: cover;
         }
         .overlay {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
@@ -280,6 +305,7 @@
         }
 
         .social-links {
+            height: 30px;
             display: flex;
             justify-content: center;
             padding: 20px 0;
@@ -336,35 +362,92 @@
                         <legend>Login:</legend>
                     </div>
                     <div>
-                        <label for="email">Email Address:</label>
-                        <input id="email" name="email" type="email" required>
+                        <label for="login-email">E-mail Address:</label>
+                        <input id="login-email" name="email" type="email" required placeholder="E-Mail">
                     </div>
                     <div>
-                        <label for="password">Password:</label>
-                        <input id="password" name="password" type="password" required>
+                        <label for="login-password">Password:</label>
+                        <input id="login-password" name="password" type="password" placeholder="Password" required>
                     </div>
                     <div>
                         <button type="submit">Enter</button>
                     </div>
+                    <div>
+                        <p>Not Registered? <a href="#" class="show-registration">Sign Up</a> Here.</p>
+                    </div>
+                </form>
+
+                <form method="POST" action="https://formdump.codeinstitue.net/" id="registration-form" style="display:none;">
+                    <div>
+                        <legend>Register:</legend>
+                    </div>
+                    <div>
+                        <label for="reg-name">Full Name:</label>
+                        <input id="reg-name" name="name" type="text" required placeholder="Full Name">
+                    </div>
+                    <div>
+                        <label for="reg-email">E-mail Address:</label>
+                        <input id="reg-email" name="email" type="email" required placeholder="E-Mail">
+                    </div>
+                    <div>
+                        <label for="reg-password">Password:</label>
+                        <input id="reg-password" name="password" type="password" required placeholder="Password">
+                    </div>
+                    <div>
+                        <label for="reg-confirm-password">Confirm Password:</label>
+                        <input id="reg-confirm-password" name="confirm_password" type="password" required placeholder="Confirm Password">
+                    </div>
+                    <div>
+                        <button type="submit">Register</button>
+                    </div>
+                    <div>
+                        <p>Already Registered? <a href="#" class="show-login">Login</a> Here.</p>
+                    </div>
                 </form>
         </div>
-    </div>
-    
-    <div class="top-div">
 
     </div>
-
-
-    <!-- <div class="overlay">
-        
-    </div> -->
+    </div>
 
     <section>
+        <div class="overlay">
+            <video src="Misc/gym_video.mp4" autoplay muted loop></video>
+        </div>
         <div class="text">
             <h3>Are You Ready To Feel</h3>
             <h1>The Pump</h1>
             <button type="submit"><strong>The Pump is Here!</strong></button>
         </div>
+    </section>
+
+    <div class="newsletter-container" id="newsletter-container-id">
+        <label for="newsletter-email">Sign Up For Our News Letter: </label>
+        <span>
+            <input id="newsletter-email" name="newsletter" type="email" placeholder="Email Here" type="submit">
+        </span>
+    </div>
+
+    <section class="mid-container">
+        <div>
+            <div>
+                <h1>The Pump</h1>
+            </div>
+            <div>
+                <h1>The Pump</h1>
+            </div>
+            <div>
+                <h1>The Pump</h1>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <!-- <div class="overlay"></div> -->
+            <div class="text">
+                <h3>Are You Ready To Feel</h3>
+                <h1>The Pump</h1>
+                <button type="submit"><strong>The Pump is Here!</strong></button>
+            </div>
     </section>
 
     <div class="social-links">
@@ -395,6 +478,17 @@
         });
         document.querySelector('.right-close-btn').addEventListener('click', function() {
             document.getElementById('side-menu-right').classList.remove('open');
+        });
+
+        document.querySelector('.show-registration').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('registration-form').style.display = 'block';
+            document.querySelector('form').style.display = 'none';
+        });
+        document.querySelector('.show-login').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('registration-form').style.display = 'none';
+            document.querySelector('form').style.display = 'block';
         });
     </script>
 </body>
