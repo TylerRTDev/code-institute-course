@@ -12,12 +12,19 @@
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
         *
         
-        body {
+        html, body {
             margin: 0;
+            padding: 0;
+            height: 100%;
             font-family: Oswald, sans-serif;
             background-color: #f5f5f5;
             color: #333;
             overflow-x: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
         }
 
         /*---Header (start)---*/
@@ -103,6 +110,22 @@
             color: white;
         }
 
+        .main-content button {
+            width: 15%;
+            padding: 5px ;
+            margin: 30px auto;
+            display: block;
+            border: none;
+            border-radius: 50px;
+            background-color: #f65454;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+            text-transform: uppercase;
+        }
+        
         /*---Close button size---*/
         .right-close-btn img {
             width: 30px;
@@ -112,9 +135,9 @@
             width: 30px;
             height: 30px;
         }
-        /*---Buttons (End)---*/
+        /*------*/
         
-        /*---Side Bars (Start)---*/
+        /*---Side Bars---*/
 
         header .login img {
             width: 40px;
@@ -181,6 +204,15 @@
             background-color: #ec4c4c;
         }
 
+        .main-content {
+            flex: 1;
+            text-align: center;
+            padding-top: 65px;
+            padding-bottom: 40px;
+        }
+
+        /*---Forms---*/
+
         .login-sidebar form legend {
             font-size: 3em;
             text-transform: uppercase; 
@@ -196,26 +228,6 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .newsletter-container{
-            margin: auto;
-            text-align: center;
-            text-transform: uppercase;
-            font-style: oblique 60deg;
-            background-color: #ec4c4c;
-            font-size: 1.5em;
-        }
-
-        #newsletter-email {
-            width: 12%;
-            top: 10px;
-            padding: 10px;
-            display: inline;
-            margin: 10px auto;
-            border: 1px solid #ccc;
-            border-radius: 15px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .login-sidebar button {
@@ -234,15 +246,30 @@
             text-transform: uppercase;
         }
 
-        section {
-            position: relative;
-            text-align: center;
-            color: rgb(0, 0, 0);
-            height: 670px;
-            padding-top: 120px;
-            padding-bottom: 8px;
+        #contact-form legend {
+            font-size: 3em;
+            text-transform: uppercase; 
+            margin: 0px;
+            color: #000000;
         }
-
+        
+        #contact-form label, #contact-form input, #contact-form textarea {
+            text-transform: uppercase;
+            color: rgb(0, 0, 0);
+            font-size: 1.2em;
+            display: block;
+            padding: 10px;
+            margin: 10px auto;
+        }
+        
+        #contact-form input, #contact-form textarea {
+            width: 15%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        /*---Social media links---*/
         .social-links {
             height: 30px;
             display: flex;
@@ -259,17 +286,25 @@
             width: 30px;
             height: 30px;
         }
+        /*------*/
 
-        footer {
+        .container-footer {
             text-align: center;
+            position: relative;
             text-transform: uppercase;
-            padding: 10px 0;
+            height: 50px;
+            padding: 10px 5px;
             background-color: #ffffff;
             color: rgb(0, 0, 0);
             width: 100%;
             bottom: 0;
             z-index: 1000;
         }
+
+        #copyright{
+            line-height: 1;
+        }
+
     </style>
 </head>
 
@@ -345,46 +380,56 @@
                 </form>
         </div>
     </div>
-    <section>
+
+    <div class="main-content">
         <div>
-            <div>
-                <form method="POST" action="https://formdump.codeinstitue.net/" id="contact-form">
-                    <div>
-                        <legend>Contact Us:</legend>
-                    </div>
-                    <div>
-                        <label for="reg-name">Full Name:</label>
-                        <input id="reg-name" name="name" type="text" required placeholder="Full Name">
-                    </div>
-                    <div>
-                        <label for="reg-email">E-mail Address:</label>
-                        <input id="reg-email" name="email" type="email" required placeholder="E-Mail">
-                    </div>
-                    <div>
-                        <label for="message">Your Message:</label>
-                        <textarea class="message-form" name="message" id="message" placeholder=""></textarea>
-                    </div>
-                    <div>
-                        <button type="submit">Send</button>
-                    </div>
-                </form>
-            </div>
+            <form method="POST" action="https://formdump.codeinstitue.net/" id="contact-form">
+                <div>
+                    <legend>Contact Us:</legend>
+                </div>
+                <div>
+                    <label for="contact-email">E-mail Address:</label>
+                    <input id="contact-email" name="email" type="email" required placeholder="E-Mail">
+                </div>
+                <div>
+                    <label for="contact-query">Query Subject:</label>
+                    <input id="contact-query" name="text" type="text" required placeholder="Subject">
+                </div>
+                <div>
+                    <label for="contact-number">Contact Number:</label>
+                    <input id="contact-number" name="number" type="number" required placeholder="Optional">
+                </div>
+                <div>
+                    <label for="message">Your Query:</label>
+                    <textarea class="message-form" name="message" id="message" placeholder=""></textarea>
+                </div>
+                <div>
+                    <button type="submit">Submit Query</button>
+                </div>
+            </form>
         </div>
-    </section>
+
+        <div class="location">
+            <h3>Our Location</h3>
+            <p>Find us at Warwick Castle in the UK:</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39523.585578632665!2d-0.2293759999999865!3d51.74722560000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48763c9e372366f1%3A0x35c57cc36489a0d4!2sPump%20Gyms%20Hatfield!5e0!3m2!1sen!2suk!4v1720228431651!5m2!1sen!2suk" 
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-hidden="false"></iframe>
+        </div>
     
-    <div class="social-links">
-        <span>More Pump Here: | </span>
-        <a href="https://www.facebook.com" target="_blank" rel="noopener"><img src="Misc/facebook.png" alt="Facebook"></a> |
-        <a href="https://www.youtube.com" target="_blank" rel="noopener"><img src="Misc/youtube.png" alt="YouTube"></a> |
-        <a href="https://www.instagram.com" target="_blank" rel="noopener"><img src="Misc/instagram.png" alt="Instagram"></a> |
-        <a href="https://www.twitter.com" target="_blank" rel="noopener"><img src="Misc/twitter-alt.png" alt="Twitter"></a> |
-        <a href="https://www.tiktok.com" target="_blank" rel="noopener"><img src="Misc/tik-tok.png" alt="TikTok"></a> |
-        <a href="https://www.snapchat.com" target="_blank" rel="noopener"><img src="Misc/snapchat.png" alt="Snapchat"></a>
+        <div class="social-links">
+            <span>More Pump Here: | </span>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener"><img src="Misc/facebook.png" alt="Facebook"></a> |
+            <a href="https://www.youtube.com" target="_blank" rel="noopener"><img src="Misc/youtube.png" alt="YouTube"></a> |
+            <a href="https://www.instagram.com" target="_blank" rel="noopener"><img src="Misc/instagram.png" alt="Instagram"></a> |
+            <a href="https://www.twitter.com" target="_blank" rel="noopener"><img src="Misc/twitter-alt.png" alt="Twitter"></a> |
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener"><img src="Misc/tik-tok.png" alt="TikTok"></a> |
+            <a href="https://www.snapchat.com" target="_blank" rel="noopener"><img src="Misc/snapchat.png" alt="Snapchat"></a>
+        </div>
     </div>
 
     <footer>
-        <div>
-            <p>Copyright © Pump Fitness Gym LTD 2024</p>
+        <div class="container-footer">
+            <p id="copyright">Copyright © Pump Fitness Gym LTD 2024</p>
         </div>
     </footer>
 
