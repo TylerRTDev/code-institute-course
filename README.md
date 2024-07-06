@@ -100,6 +100,8 @@ Consider using automated testing tools like Selenium for end-to-end testing:
     * https://www.w3schools.com/css/css_website_layout.asp
     * https://www.w3schools.com/css/css_templates.asp
     * https://www.w3schools.com/cssref/pr_class_position.php
+    * https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1
+    * https://www.w3schools.com/css/css3_buttons.asp
     * https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapse_sidebar
     * https://www.w3schools.com/cssref/pr_text_letter-spacing.php
 - Course videos and personal notes
@@ -123,6 +125,7 @@ Consider using automated testing tools like Selenium for end-to-end testing:
     * https://www.youtube.com/watch?v=8MgpE2DTTKA&ab
     * https://codepen.io/bradtraversy/pen/eYdMqvx?editors=1100
     * https://www.youtube.com/watch?v=JywjlMIVzH8&
+    * https://www.youtube.com/watch?v=znqUwx0b0HI&ab
 - https://www.geeksforgeeks.org/how-to-put-an-input-element-on-the-same-line-as-its-label/
 - https://www.pexels.com/
 - https://elements.envato.com/

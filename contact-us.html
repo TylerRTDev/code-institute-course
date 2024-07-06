@@ -210,6 +210,7 @@
             text-align: center;
             padding-top: 65px;
             padding-bottom: 40px;
+            z-index: 1;
         }
 
         .main-content h3 {
@@ -259,12 +260,12 @@
             font-style: oblique 60deg;
             text-transform: uppercase; 
             margin: 0px;
-            color: #000000;
+            color: #ffffff;
         }
         
         #contact-form label {
             text-transform: uppercase;
-            color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             font-size: 1.2em;
             display: block;
             padding: 10px;
@@ -285,6 +286,19 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-background {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            background-size: cover;
         }
         
         /*---Social media links---*/
@@ -400,6 +414,11 @@
                 </form>
         </div>
     </div>
+
+    <video autoplay muted loop class="video-background">
+        <source src="Videos/contact_us.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
     <div class="main-content">
         <div>
