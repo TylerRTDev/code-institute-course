@@ -7,7 +7,7 @@
     <meta name="keywords" content="gym, fitness center, london gym, personal training, group fitness classes, yoga, strength training">
     <meta name="author" content="Code Institute">
     <title>Pump Fitness Gym | A Fitness Community</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="Style/style.css" rel="stylesheet" type="text/css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
         *
@@ -19,9 +19,12 @@
             color: #333;
             overflow-x: hidden;
         }
+
+        /*---Header (start)---*/
         header {
             padding: 0% 0%;
             background-color: #ffffff;
+            letter-spacing: -3px;
             text-align: center;
             color: rgb(0, 0, 0);
             position: fixed;
@@ -41,17 +44,16 @@
             font-style: oblique 60deg;
             margin: 0px;
         }
-        .menu-toggle {
-            background-color: white;
-            position: fixed;
-            top: 2%;
-            left: 10px;
-            z-index: 2200;
-            color: rgb(255, 255, 255);
-            cursor: grabbing;
-            border: none;
+
+        header a{
+            text-decoration: none;
+            color: #000000;
         }
-        .login {
+        /*---Header (end)---*/
+
+        /*---Buttons (Start)---*/
+
+        .login-btn {
             background-color: white;
             position: fixed;
             top: 1.75%;
@@ -61,49 +63,39 @@
             cursor: pointer;
             border: none;
         }
-        header .login img{
-            width: 40px;
-            height: 40px;
-        }
-        nav {
+
+        .menu-btn {
+            background-color: white;
             position: fixed;
-            top: 0;
-            left: -250px;
-            width: 250px;
-            height: 100%;
-            background-color: #ffffff;
-            overflow-y: auto;
-            transition: left 0.3s;
-            z-index: 1050;
-            padding-top: 80px;
+            top: 2%;
+            left: 10px;
+            z-index: 2200;
+            color: rgb(255, 255, 255);
+            cursor: grabbing;
+            border: none;
         }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            margin: 20px 0;
-            text-align: center;
-        }
-        nav ul li a {
-            text-transform: capitalize;
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            font-size: 1.2em;
-            display: block;
-            padding: 10px;
-        }
-        nav ul li a:hover {
-            background-color: #ec4c4c;
-        }
-        nav.open {
-            left: 0;
-        }
+
         .close-btn {
+            left: 20px;
+        }
+
+        .right-close-btn {
+            right: 20px;
+        }
+
+        .menu-btn, .login-btn {
+            background-color: white;
+            position: fixed;
+            top: 2%;
+            z-index: 2200;
+            color: rgb(255, 255, 255);
+            cursor: grabbing;
+            border: none;
+        }
+
+        .close-btn, .right-close-btn {
             position: absolute;
             top: 20px;
-            right: 20px;
             background: none;
             border: none;
             cursor: pointer;
@@ -111,9 +103,164 @@
             color: white;
         }
 
+        /*---Close button size---*/
+        .right-close-btn img {
+            width: 30px;
+            height: 30px;
+        }
         .close-btn img {
             width: 30px;
             height: 30px;
+        }
+        /*---Buttons (End)---*/
+        
+        /*---Side Bars (Start)---*/
+
+        header .login img {
+            width: 40px;
+            height: 40px;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 200px;
+            height: 100%;
+            background-color: #ffffff;
+            overflow-y: auto;
+            transition: left 0.3s;
+            z-index: 1050;
+            padding-top: 80px;
+            
+        }
+
+        .right-side {
+            position: fixed;
+            top: 0px;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: #ffffff;
+            overflow-y: clip;
+            transition: right 0.3s;
+            z-index: 1050;
+            padding-top: 70px;
+            border-left: 1px solid #ccc;
+        }
+
+        nav.open {
+            left: 0;
+        }
+
+        .right-side.open {
+            right: 0;
+        }
+
+        nav ul, .login-sidebar form {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li a, .login-sidebar label {
+            text-transform: uppercase;
+        }
+
+        nav ul li,.login-sidebar form div {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav ul li a, .login-sidebar input, .login-sidebar button {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 1.2em;
+            display: block;
+            padding: 10px;
+        }
+        nav ul li a:hover, .login-sidebar button:hover {
+            background-color: #ec4c4c;
+        }
+
+        .login-sidebar form legend {
+            font-style: oblique 60deg;
+            font-size: 3em;
+            text-transform: uppercase; 
+            margin: 0px;
+            color: #000000;
+        }
+
+        .login-sidebar input {
+            width: 85%;
+            padding: 10px;
+            margin: 10px;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .newsletter-container{
+            margin: auto;
+            text-align: center;
+            text-transform: uppercase;
+            font-style: oblique 60deg;
+            background-color: #ec4c4c;
+            font-size: 1.5em;
+        }
+
+        #newsletter-email {
+            width: 12%;
+            top: 10px;
+            padding: 10px;
+            display: inline;
+            margin: 10px auto;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .mid-container {
+            padding: 20px;
+            margin: 40px auto;
+            max-width: 800px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .mid-container h1 {
+            text-align: center;
+            color: #000000;
+            font-size: 2em;
+            font-style: oblique 60deg;
+            font-weight: 400;
+            text-transform: uppercase; 
+            margin: 20px;
+            color: #000000;
+        }
+
+        .mid-container p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .login-sidebar button {
+            width: 40%;
+            padding: 5px ;
+            margin: 30px auto;
+            display: block;
+            border: none;
+            border-radius: 50px;
+            background-color: #f65454;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+            text-transform: uppercase;
         }
 
         section {
@@ -127,7 +274,7 @@
         }
 
         video {
-            position: fixed;
+            position: absolute;
             top: 50%;
             left: 50%;
             min-width: 100%;
@@ -143,24 +290,31 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.57);
+            background: rgba(0, 0, 0, 0.665);
         }
+
         section .text {
+            text-transform: uppercase;
+            font-style: oblique 60deg;
             position: relative;
             top: 50%;
             transform: translateY(-50%);
         }
-        /*
-        section .text h2 {
-            font-size: 1.5em;
-            margin: 0;
-        }
+        
         section .text h3 {
-            font-size: 4em;
-            margin: 10px 0;
+            font-stretch: extra-expanded;
+            font-size: 1.5em;
+            margin: 0px;
         }
-        */
+        section .text h2 {
+            letter-spacing: -10px;
+            font-size: 10em;
+            line-height: 85%;
+            margin: 0px;
+        }
+        
         section button {
+            width: auto;
             background-color: #f65454;
             color: white;
             border: none;
@@ -169,15 +323,17 @@
             cursor: pointer;
             border-radius: 5px;
             margin-top: 20px;
+            text-transform: uppercase;
         }
         section button:hover {
             background-color: #0cd64c;
         }
 
         .social-links {
+            height: 30px;
             display: flex;
             justify-content: center;
-            padding: 20px 0;
+            background-color: #ec4c4c;
         }
 
         .social-links a {
@@ -190,7 +346,7 @@
             height: 30px;
         }
 
-        footer {
+        .container-footer{
             text-align: center;
             text-transform: uppercase;
             padding: 10px 0;
@@ -200,64 +356,157 @@
             bottom: 0;
             z-index: 1000;
         }
+
+        #copyright{
+            line-height: 1;
+        }
+
     </style>
 </head>
 
 <body>
     <header>
-        <h1 id="logo"><a href="index.html"></a>Pump Fitness</h1>
-        <button class="menu-toggle"><img src="misc/menu.png" alt="menu-button"></button>
-        <button class="login"><img src="misc/login.png" alt="login-button"><a href="login.html"></a></button>
+        <h1 id="logo"><a href="index.html">Pump Fitness</a></h1>
+        <button class="menu-btn"><img src="Images/menu.png" alt="menu-btn"></button>
+        <button class="login-btn"><img src="Images/login.png" alt="login-btn"></button>
     </header>
     
-    <nav id="side-menu">
-        <button class="close-btn" id="close-menu-btn"><img src="misc/close.png" alt="close-button"></button>
+    <nav id="side-menu-left">
+        <button class="close-btn"><img src="Images/close.png" alt="close-menu-btn"></button>
         <div id="side-menu-bar" class="sidebar">
             <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Membership</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about-section">About Us</a></li>
+                <li><a href="membership.html ">Membership</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
                 <li class="tym"><a href="#">Test Your Might!</a></li>
             </ul>
         </div>
     </nav>
 
-    
-    <!-- <div class="overlay">
-        <video src="misc/gym_video.mp4" muted loop autoplay></video>
-    </div> -->
+    <div class="right-side" id="side-menu-right">
+        <button class="right-close-btn"><img src="Images/close.png" alt="close-menu-btn-right"></button>
+        <div id="login-side-menu-bar" class="login-sidebar">
+                <form method="POST" action="https://formdump.codeinstitue.net/">
+                    <div>
+                        <legend>Login:</legend>
+                    </div>
+                    <div>
+                        <label for="login-email">E-mail Address:</label>
+                        <input id="login-email" name="email" type="email" required placeholder="E-Mail">
+                    </div>
+                    <div>
+                        <label for="login-password">Password:</label>
+                        <input id="login-password" name="password" type="password" placeholder="Password" required>
+                    </div>
+                    <div>
+                        <button type="submit">Enter</button>
+                    </div>
+                    <div>
+                        <p>Not Registered? <a href="#" class="show-registration">Sign Up</a> Here.</p>
+                    </div>
+                </form>
+
+                <form method="POST" action="https://formdump.codeinstitue.net/" id="registration-form" style="display:none;">
+                    <div>
+                        <legend>Register:</legend>
+                    </div>
+                    <div>
+                        <label for="reg-name">Full Name:</label>
+                        <input id="reg-name" name="name" type="text" required placeholder="Full Name">
+                    </div>
+                    <div>
+                        <label for="reg-email">E-mail Address:</label>
+                        <input id="reg-email" name="email" type="email" required placeholder="E-Mail">
+                    </div>
+                    <div>
+                        <label for="reg-password">Password:</label>
+                        <input id="reg-password" name="password" type="password" required placeholder="Password">
+                    </div>
+                    <div>
+                        <label for="reg-confirm-password">Confirm Password:</label>
+                        <input id="reg-confirm-password" name="confirm_password" type="password" required placeholder="Confirm Password">
+                    </div>
+                    <div>
+                        <button type="submit">Register</button>
+                    </div>
+                    <div>
+                        <p>Already Registered? <a href="#" class="show-login">Login</a> Here.</p>
+                    </div>
+                </form>
+        </div>
+
+    </div>
+    </div>
 
     <section>
+        <div class="overlay">
+            <video src="Videos/gym_video.mp4" autoplay muted loop></video>
+        </div>
         <div class="text">
-            <h2>You Will Feel</h2>
-            <h3>The Pump</h3>
-            <button type="submit"><strong>The Pump is Here!</strong></button>
+            <h3 style="color: #ccc;">Are You Ready To Feel</h3>
+            <h2 style="color: #ec4c4c;">The Pump</h2>
+            <button type="submit">Join Now!</button>
+        </div>
+    </section>
+
+    <div class="newsletter-container" id="newsletter-container-id">
+        <label for="newsletter-email">Sign Up For Our News Letter: </label>
+        <span>
+            <input id="newsletter-email" name="newsletter" type="email" placeholder="Email Here" type="submit">
+        </span>
+    </div>
+
+    <section class="mid-container">
+        <div>
+            <div>
+                <h1 id="about-section">Pump Fitness Family</h1>
+            </div>
+            <div>
+                Welcome to Pump Fitness Gym, where your fitness journey becomes a lifestyle. Nestled in the heart of London, our state-of-the-art facility offers a dynamic and supportive environment for individuals of all fitness levels. At Pump Fitness, we believe in empowering our members through personalized training programs, diverse group classes, and a vibrant community that inspires and motivates. Our team of experienced trainers is dedicated to helping you achieve your health and fitness goals, providing expert guidance and encouragement every step of the way. Join us and become part of a fitness community that values strength, wellness, and camaraderie. Let's pump up your fitness journey together!
+            </div>
         </div>
     </section>
 
     <div class="social-links">
         <span>More Pump Here: | </span>
-        <a href="https://www.facebook.com" target="_blank" rel="noopener"><img src="misc/facebook.png" alt="Facebook"></a> |
-        <a href="https://www.youtube.com" target="_blank" rel="noopener"><img src="misc/youtube.png" alt="YouTube"></a> |
-        <a href="https://www.instagram.com" target="_blank" rel="noopener"><img src="misc/instagram.png" alt="Instagram"></a> |
-        <a href="https://www.twitter.com" target="_blank" rel="noopener"><img src="misc/twitter-alt.png" alt="Twitter"></a> |
-        <a href="https://www.tiktok.com" target="_blank" rel="noopener"><img src="misc/tik-tok.png" alt="TikTok"></a> |
-        <a href="https://www.snapchat.com" target="_blank" rel="noopener"><img src="misc/snapchat.png" alt="Snapchat"></a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener"><img src="Images/facebook.png" alt="Facebook"></a> |
+        <a href="https://www.youtube.com" target="_blank" rel="noopener"><img src="Images/youtube.png" alt="YouTube"></a> |
+        <a href="https://www.instagram.com" target="_blank" rel="noopener"><img src="Images/instagram.png" alt="Instagram"></a> |
+        <a href="https://www.twitter.com" target="_blank" rel="noopener"><img src="Images/twitter-alt.png" alt="Twitter"></a> |
+        <a href="https://www.tiktok.com" target="_blank" rel="noopener"><img src="Images/tik-tok.png" alt="TikTok"></a> |
+        <a href="https://www.snapchat.com" target="_blank" rel="noopener"><img src="Images/snapchat.png" alt="Snapchat"></a>
     </div>
 
     <footer>
-        <div>
-            <p>Copyright © Pump Fitness Gym LTD 2024</p>
+        <div class="container-footer">
+            <p id="copyright">Copyright © Pump Fitness Gym LTD 2024</p>
         </div>
     </footer>
 
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.getElementById('side-menu').classList.toggle('open');
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+            document.getElementById('side-menu-left').classList.toggle('open');
         });
-        document.getElementById('close-menu-btn').addEventListener('click', function() {
-            document.getElementById('side-menu').classList.remove('open');
+        document.querySelector('.close-btn').addEventListener('click', function() {
+            document.getElementById('side-menu-left').classList.remove('open');
+        });
+        document.querySelector('.login-btn').addEventListener('click', function() {
+            document.getElementById('side-menu-right').classList.toggle('open');
+        });
+        document.querySelector('.right-close-btn').addEventListener('click', function() {
+            document.getElementById('side-menu-right').classList.remove('open');
+        });
+
+        document.querySelector('.show-registration').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('registration-form').style.display = 'block';
+            document.querySelector('form').style.display = 'none';
+        });
+        document.querySelector('.show-login').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('registration-form').style.display = 'none';
+            document.querySelector('form').style.display = 'block';
         });
     </script>
 </body>

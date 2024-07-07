@@ -1,0 +1,46 @@
+/*---Membership form---*/
+
+.membership-container { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 20px;
+    z-index: 1; 
+}
+
+.membership-option { 
+    background-color: #fff; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    margin: 10px 0; 
+    padding: 20px; 
+    text-align: left; 
+    width: 80%; 
+    max-width: 600px; 
+}
+
+.membership-option h3 { 
+    font-size: 1.5em; 
+    margin: 0 0 10px; 
+}
+
+.membership-option p { 
+    margin: 10px 0; 
+}
+
+.membership-option label { 
+    display: flex; 
+    align-items: center; 
+    cursor: pointer; 
+}
+
+.membership-option input[type="radio"] { 
+    margin-right: 10px; 
+}
+
+.membership-option .price { 
+    font-size: 1.2em; 
+    font-weight: bold; 
+}
