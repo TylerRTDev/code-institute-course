@@ -189,6 +189,10 @@
             color: #000000;
         }
 
+        legend {
+            text-align: center;
+        }
+
         .login-sidebar input {
             width: 85%;
             padding: 10px;
@@ -313,19 +317,22 @@
             margin: 0px;
         }
         
-        section button {
+        section a {
             width: auto;
             background-color: #f65454;
             color: white;
             border: none;
-            padding: 15px 30px;
+            padding: 10px 30px;
             font-size: 1em;
             cursor: pointer;
             border-radius: 5px;
-            margin-top: 20px;
+            margin-top: 10px;
             text-transform: uppercase;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
         }
-        section button:hover {
+        section a:hover {
             background-color: #0cd64c;
         }
 
@@ -386,9 +393,7 @@
         <button class="right-close-btn"><img src="Images/close.png" alt="close-menu-btn-right"></button>
         <div id="login-side-menu-bar" class="login-sidebar">
                 <form method="POST" action="https://formdump.codeinstitue.net/">
-                    <div>
                         <legend>Login:</legend>
-                    </div>
                     <div>
                         <label for="login-email">E-mail Address:</label>
                         <input id="login-email" name="email" type="email" required placeholder="E-Mail">
@@ -406,9 +411,7 @@
                 </form>
 
                 <form method="POST" action="https://formdump.codeinstitue.net/" id="registration-form" style="display:none;">
-                    <div>
                         <legend>Register:</legend>
-                    </div>
                     <div>
                         <label for="reg-name">Full Name:</label>
                         <input id="reg-name" name="name" type="text" required placeholder="Full Name">
@@ -435,7 +438,6 @@
         </div>
 
     </div>
-    </div>
 
     <section>
         <div class="overlay">
@@ -444,14 +446,14 @@
         <div class="text">
             <h3 style="color: #ccc;">Are You Ready To Feel</h3>
             <h2 style="color: #ec4c4c;">The Pump</h2>
-            <button type="submit"><a href="membership.html">Join Now!</a></button>
+            <a href="membership.html">Join Now!</a>
         </div>
     </section>
 
     <div class="newsletter-container" id="newsletter-container-id">
         <label for="newsletter-email">Sign Up For Our News Letter: </label>
         <span>
-            <input id="newsletter-email" name="newsletter" type="email" placeholder="Email Here" type="submit">
+            <input id="newsletter-email" name="newsletter" type="email" placeholder="Email Here">
         </span>
     </div>
 
