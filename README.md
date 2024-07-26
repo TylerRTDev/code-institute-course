@@ -1,5 +1,7 @@
 # Pump Fitness Gym Website
 
+Link To Website: https://tylerrtdev.github.io/code-institute-course/
+
 ## Overview
 
 The Pump Fitness Gym website is designed to create a thriving online presence for Pump Fitness Gym, offering information about gym memberships, classes, and services as well as business location. It provides an intuitive and user-friendly interface for current and potential members to explore membership options, contact the gym, and learn more about the facilities and community.
@@ -74,10 +76,23 @@ Open your web browser and navigate to your domain to verify that the website is 
 
 #### Forms
 - Test the forms for validation.
+  - Check for required field indications.
+  - Ensure correct error messages are displayed for invalid inputs.
+  - Verify successful form submission and expected outcomes.
 
 #### Responsiveness
 - Verify that the website layout adapts appropriately to various screen sizes (desktop, tablet, mobile).
 - Ensure all elements are visible and usable on smaller screens.
+
+#### Functionality
+- Test all interactive elements (buttons, links, forms) to ensure they work as intended.
+- Verify that any dynamic content (such as AJAX-loaded elements) updates correctly and promptly.
+- Check that user actions produce the expected results (e.g., clicking a button leads to the correct page or action).
+
+#### Usability
+- Evaluate the ease of navigation and use of the website for a new user.
+- Assess whether the information is easily accessible and the layout is intuitive.
+- Ensure that the visual design is consistent and aesthetically pleasing.
 
 ### Automated Testing
 Consider using automated testing tools like Selenium for end-to-end testing:
@@ -85,7 +100,29 @@ Consider using automated testing tools like Selenium for end-to-end testing:
 1. Write test scripts to automate the form submissions.
 2. Use assertions to validate expected outcomes (e.g., success messages, form field validations).
 
+### Design and Implement Manual Testing Procedures
+
+#### Functionality Testing
+- Design specific test cases for each feature of the website.
+- Implement step-by-step procedures to test these features manually.
+- Document the expected vs. actual results for each test case.
+
+#### Usability Testing
+- Create scenarios that a typical user might follow while using the website.
+- Perform these scenarios to identify any usability issues.
+- Gather feedback from real users and incorporate it into the usability testing process.
+
+#### Responsiveness Testing
+- Use various devices (desktop, tablet, mobile) to test the website.
+- Implement a checklist for elements to verify on each screen size, such as visibility, alignment, and accessibility.
+
+### Documentation
+- Maintain a detailed log of all testing activities, including dates, testers involved, and results.
+- Record any bugs or issues found, along with steps to reproduce and potential fixes.
+
+
 ## External References
+
 - Google Fonts
     * https://fonts.google.com/icons
 - Code Institute Form Dump
@@ -131,3 +168,17 @@ Consider using automated testing tools like Selenium for end-to-end testing:
 - https://elements.envato.com/
 - https://www.flaticon.com/
 - https://developer.mozilla.org/en-US/docs/Web/CSS/container
+
+### W3C Code Validation
+
+<details>
+<summary>HTML</summary>
+
+![alt text](image.png)
+</details>
+<br>
+<details>
+<summary>CSS</summary>
+
+![alt text](image-1.png)
+</details>
