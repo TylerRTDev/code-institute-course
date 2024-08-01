@@ -94,33 +94,6 @@ Open your web browser and navigate to your domain to verify that the website is 
 - Assess whether the information is easily accessible and the layout is intuitive.
 - Ensure that the visual design is consistent and aesthetically pleasing.
 
-### Automated Testing
-Consider using automated testing tools like Selenium for end-to-end testing:
-
-1. Write test scripts to automate the form submissions.
-2. Use assertions to validate expected outcomes (e.g., success messages, form field validations).
-
-### Design and Implement Manual Testing Procedures
-
-#### Functionality Testing
-- Design specific test cases for each feature of the website.
-- Implement step-by-step procedures to test these features manually.
-- Document the expected vs. actual results for each test case.
-
-#### Usability Testing
-- Create scenarios that a typical user might follow while using the website.
-- Perform these scenarios to identify any usability issues.
-- Gather feedback from real users and incorporate it into the usability testing process.
-
-#### Responsiveness Testing
-- Use various devices (desktop, tablet, mobile) to test the website.
-- Implement a checklist for elements to verify on each screen size, such as visibility, alignment, and accessibility.
-
-### Documentation
-- Maintain a detailed log of all testing activities, including dates, testers involved, and results.
-- Record any bugs or issues found, along with steps to reproduce and potential fixes.
-
-
 ## External References
 
 - Google Fonts
@@ -174,11 +147,11 @@ Consider using automated testing tools like Selenium for end-to-end testing:
 <details>
 <summary>HTML</summary>
 
-![alt text](image.png)
+![HTML Validation Image](Images/html-checker.png)
 </details>
 <br>
 <details>
 <summary>CSS</summary>
 
-![alt text](image-1.png)
+![CSS Validation Image](Images/css-checker.png)
 </details>

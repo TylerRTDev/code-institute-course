@@ -1,0 +1,17 @@
+Milestone Project
+
+Meeting w/ Paul
+
+5.1
+
+5.2
+
+5.3
+
+Add link to website ontop of Markdown file.
+
+Manual Testing
+
+Using validators (Screenshots)
+
+Use iFrame tag instead of element

@@ -231,7 +231,7 @@
         }
 
         .login-sidebar input {
-            width: 80%;
+            width: 86.5%;
             padding: 10px;
             margin: 10px;
             display: block;
@@ -266,12 +266,12 @@
             font-style: oblique 60deg;
             text-transform: uppercase; 
             margin: 0px;
-            color: #ffffff;
+            color: #000000;
         }
         
         #contact-form label {
             text-transform: uppercase;
-            color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
             font-size: 1.2em;
             display: block;
             padding: 10px;
@@ -289,7 +289,7 @@
         
         #contact-form input, #contact-form textarea {
             width: 15%;
-            border: 1px solid #ccc;
+            border: 1px solid #000000;
             border-radius: 5px;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
         }
@@ -306,14 +306,24 @@
             transform: translate(-50%, -50%);
             background-size: cover;
         }
+
+        .bg-image-contact {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
         
         /*---Social media links---*/
         .social-links {
             height: 30px;
             display: flex;
             justify-content: center;
-            padding: 20px 0;
-            margin-bottom: -2%;
+            padding: 20px;
+            margin-bottom: -40px;
             background-color: #ec4c4c;
         }
 
@@ -339,6 +349,10 @@
             width: 100%;
             bottom: 0;
             z-index: 1000;
+        }
+
+        .location {
+            margin-bottom: -5px;
         }
 
         #copyright{
@@ -415,10 +429,9 @@
         </div>
     </div>
 
-    <video autoplay muted loop class="video-background">
-        <source src="Videos/contact_us.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <div>
+        <img class="bg-image-contact" src="Images/contact.jpg" alt="">
+    </div>
 
     <div class="main-content">
         <div>

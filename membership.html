@@ -25,11 +25,11 @@
         body {
             display: flex;
             flex-direction: column;
+            min-height: 100vh;
         }
 
         /*---Header (start)---*/
         header {
-            padding: 0% 0%;
             background-color: #ffffff;
             letter-spacing: -3px;
             text-align: center;
@@ -152,7 +152,6 @@
             transition: right 0.3s;
             z-index: 1050;
             padding-top: 70px;
-            border-left: 1px solid #ccc;
         }
 
         nav.open {
@@ -188,6 +187,11 @@
             background-color: #ec4c4c;
         }
 
+        #page-title-membership {
+            width: auto;
+            margin-top: 3%;
+        }
+
         .main-content {
             color: #000000;
             flex: 1;
@@ -207,6 +211,16 @@
             font-weight: 400;
         }
 
+        .bg-image-membership {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
         /*---Forms---*/
 
         .login-sidebar form h1 {
@@ -224,7 +238,7 @@
         }
 
         .login-sidebar input {
-            width: 80%;
+            width: 86.5%;
             padding: 10px;
             margin: 10px;
             display: block;
@@ -270,11 +284,8 @@
             height: 30px;
             display: flex;
             justify-content: center;
-            padding: 20px 0;
-            margin-top: 1%;
-            line-height: 2;
+            padding: 20px;
             background-color: #ec4c4c;
-            z-index: 3;
         }
 
         .social-links a {
@@ -312,6 +323,7 @@
             width: 100%;
             bottom: 0;
             z-index: 1000;
+            margin-top: auto;
         }
 
         #copyright{
@@ -388,13 +400,17 @@
         </div>
     </div>
 
-    <video autoplay muted loop class="video-background">
+    <!-- <video class="video-background" autoplay muted loop controls>
         <source src="Videos/membership_video.mp4" type="video/mp4">
         Your browser does not support the video tag.
-    </video>
+    </video> -->
+
+    <div>
+        <img class="bg-image-membership" src="Images/memebrship.jpg" alt="">
+    </div>
 
     <div class="main-content">
-        <h2>Choose Your Membership Plan</h2>
+        <h2 id="page-title-membership">Choose Your Membership Plan</h2>
         <div class="membership-container">
             <div class="membership-option">
                 <label>
@@ -426,6 +442,7 @@
             <button class="payment-btn">Proceed to Payment</button>
         </div>
     </div>
+
     <div class="social-links">
         <span>More Pump Here: | </span>
         <a href="https://www.facebook.com" target="_blank" rel="noopener"><img src="Images/facebook.png" alt="Facebook"></a> |
