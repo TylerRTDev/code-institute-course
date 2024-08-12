@@ -62,6 +62,7 @@
             color: rgb(255, 255, 255);
             cursor: pointer;
             border: none;
+            margin: -15px auto;
         }
 
         .menu-btn {
@@ -73,6 +74,15 @@
             color: rgb(255, 255, 255);
             cursor: grabbing;
             border: none;
+            margin: -15px auto;
+        }
+
+        .menu-btn p, .login-btn p {
+            color: #000000;
+            margin: -1px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
         }
 
         .close-btn {
@@ -170,6 +180,7 @@
             margin: 20px 0;
             text-align: center;
         }
+
         nav ul li a, .login-sidebar input, .login-sidebar button {
             color: rgb(0, 0, 0);
             text-decoration: none;
@@ -177,6 +188,7 @@
             display: block;
             padding: 10px;
         }
+
         nav ul li a:hover, .login-sidebar button:hover {
             background-color: #ec4c4c;
         }
@@ -201,7 +213,7 @@
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .newsletter-container{
+        .newsletter-container {
             margin: 37px auto;
             text-align: center;
             text-transform: uppercase;
@@ -222,8 +234,9 @@
         }
 
         .mid-container {
-            padding: 20px;
-            margin: 40px auto;
+            margin: auto;
+            width: 90%;
+            height: 90%;
             max-width: 800px;
             max-height: 600px;
             background-color: #fff;
@@ -231,6 +244,12 @@
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             text-align: left;
+        }
+
+        .main-body-text {
+            text-align: center;
+            margin: 100px;
+            margin-bottom: 100%;
         }
 
         .login-sidebar button {
@@ -281,6 +300,7 @@
             top: 20px;
             margin: 0px;
         }
+
         .text h2 {
             letter-spacing: -10px;
             font-size: 10em;
@@ -302,12 +322,6 @@
             z-index: -1;
         }
 
-        .main-body-text {
-            text-align: center;
-            margin: 100px;
-            margin-bottom: 300px;
-        }
-        
         .section a {
             width: auto;
             background-color: #f65454;
@@ -332,6 +346,7 @@
             display: flex;
             justify-content: center;
             background-color: #ec4c4c;
+            z-index: 1000;
         }
 
         .social-links a {
@@ -365,8 +380,8 @@
 <body>
     <header>
         <h1 id="logo"><a href="index.html">Pump Fitness</a></h1>
-        <button class="menu-btn"><img src="Images/menu.png" alt="menu-btn"></button>
-        <button class="login-btn"><img src="Images/login.png" alt="login-btn"></button>
+        <button class="menu-btn"><img src="Images/menu.png" alt="menu-btn"><p>Menu</p></button>
+        <button class="login-btn"><img src="Images/login.png" alt="login-btn"><p>Login</p></button>
     </header>
     
     <nav id="side-menu-left">
