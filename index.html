@@ -225,6 +225,7 @@
             padding: 20px;
             margin: 40px auto;
             max-width: 800px;
+            max-height: 600px;
             background-color: #fff;
             border: 1px solid #ccc;
             border-radius: 10px;
@@ -256,31 +257,31 @@
             padding-bottom: 80px;
         }
 
-
-
         .overlay {
             position: absolute;
             top:0;  
             left:0;  
             right:0;  
             bottom:0;
-            background: rgba(0, 0, 0, 0.463);
+            background: rgba(255, 255, 255, 0.463);
         }
 
-        .section .text {
+        .text {
             text-transform: uppercase;
             font-style: oblique 60deg;
             position: relative;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 5%;
+            padding-top: 1%;
+            transform: translateY(-50%, -50%);
         }
         
-        .section .text h3 {
+        .text h3 {
             font-stretch: extra-expanded;
             font-size: 1.5em;
+            top: 20px;
             margin: 0px;
         }
-        .section .text h2 {
+        .text h2 {
             letter-spacing: -10px;
             font-size: 10em;
             line-height: 85%;
@@ -295,10 +296,16 @@
             text-transform: uppercase;
         }
 
+        video {
+            object-fit: cover;
+            overflow: hidden;
+            z-index: -1;
+        }
+
         .main-body-text {
             text-align: center;
             margin: 100px;
-            margin-bottom: 500px;
+            margin-bottom: 300px;
         }
         
         .section a {
@@ -317,7 +324,7 @@
             text-align: center;
         }
         .section a:hover {
-            background-color: #0cd64c;
+            background-color: #aeaeae;
         }
 
         .social-links {
@@ -424,10 +431,11 @@
 
     <div class="section">
         <div class="overlay">
-            <video width="100%" autoplay muted loop controls>
+            <video width="100%" height="100%" autoplay muted loop controls>
                 <source src="Videos/gym_video.mp4" type="video/mp4">
             </video>
         </div>
+
         <div class="text">
             <h3 style="color: #ec4c4c;">Are You Ready To Feel</h3>
             <h2 style="color: #ec4c4c;">The Pump</h2>
@@ -449,17 +457,17 @@
         </div>
     </div>
 
-    <div class="social-links">
-        <span>More Pump Here: | </span>
-        <a href="https://www.facebook.com" target="_blank" rel="noopener"><img src="Images/facebook.png" alt="Facebook"></a> |
-        <a href="https://www.youtube.com" target="_blank" rel="noopener"><img src="Images/youtube.png" alt="YouTube"></a> |
-        <a href="https://www.instagram.com" target="_blank" rel="noopener"><img src="Images/instagram.png" alt="Instagram"></a> |
-        <a href="https://www.twitter.com" target="_blank" rel="noopener"><img src="Images/twitter-alt.png" alt="Twitter"></a> |
-        <a href="https://www.tiktok.com" target="_blank" rel="noopener"><img src="Images/tik-tok.png" alt="TikTok"></a> |
-        <a href="https://www.snapchat.com" target="_blank" rel="noopener"><img src="Images/snapchat.png" alt="Snapchat"></a>
-    </div>
-
     <footer>
+        <div class="social-links">
+            <span>More Pump Here: | </span>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener"><img src="Images/facebook.png" alt="Facebook"></a> |
+            <a href="https://www.youtube.com" target="_blank" rel="noopener"><img src="Images/youtube.png" alt="YouTube"></a> |
+            <a href="https://www.instagram.com" target="_blank" rel="noopener"><img src="Images/instagram.png" alt="Instagram"></a> |
+            <a href="https://www.twitter.com" target="_blank" rel="noopener"><img src="Images/twitter-alt.png" alt="Twitter"></a> |
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener"><img src="Images/tik-tok.png" alt="TikTok"></a> |
+            <a href="https://www.snapchat.com" target="_blank" rel="noopener"><img src="Images/snapchat.png" alt="Snapchat"></a>
+        </div>
+
         <div class="container-footer">
             <p id="copyright">Copyright © Pump Fitness Gym LTD 2024</p>
         </div>
