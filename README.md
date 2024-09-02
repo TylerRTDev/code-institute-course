@@ -81,7 +81,7 @@ This will give you the ability to see what your ip address is.
 
 Domain URL: `https://[your-ip-address-here]:3000/`
 
-![alt text](/Images/domain-url.png.png)
+![alt text](/Images/domain-url.png)
 
 When you use `127.0.0.1` in a web browser, you're connecting to a server running on your own computer.
 
