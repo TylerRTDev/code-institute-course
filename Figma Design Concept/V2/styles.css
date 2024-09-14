@@ -1,3 +1,5 @@
+/* Main Body */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,10 +10,12 @@
 
 body, html {
     height: 100%;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
     display: flex;
-    flex-direction: column; /* Set body to use flexbox */
+    flex-direction: column;
 }
+
+/* Background */
 
 .background-video {
     opacity: 90%;
@@ -21,7 +25,7 @@ body, html {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1; /* Stay behind all content */
+    z-index: -1;
 }
 
 .background-image {
@@ -33,15 +37,16 @@ body, html {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1; /* Stay behind all content */
+    z-index: -1;
 }
 
-/* Content Overlay that floats over the video */
 .content-overlay {
     position: relative;
-    z-index: 1; /* Ensures content is above the video */
-    flex: 1; /* Make content overlay take up the remaining space */
-}
+    z-index: 1;
+    flex: 1;
+} /* Content Overlay that floats over the video */
+
+/* Header */
 
 header {
     background-color: #ffffff;
@@ -62,25 +67,30 @@ header {
 }
 
 .header-container h1 {
-    letter-spacing: -3px;
+    letter-spacing: -1px;
+    text-decoration: underline;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     font-size: 2.5rem;
+    font-style: oblique 60deg;
     font-weight: bold;
 }
 
-.menu-icon {
+.menu-icon, .login-icon {
+    background-color: rgba(255, 255, 255, 0);
     font-size: 1.5rem;
     cursor: pointer;
     margin-left: 0;
+    border: none;
 }
 
-.login-icon {
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin-right: 0;
+.menu-icon img, .login-icon img {
+    width: 30px;
+    height: 30px;
 }
+
+/* Main Content */
 
 .hero {
     margin-top: 50px;
@@ -222,6 +232,98 @@ header {
 .feature img {
     height: 100px;
     width: 100px;
+}
+
+/* Sidebar Common Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar h2 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 4rem;
+    font-style: oblique 60deg;
+    text-transform: uppercase;
+}
+
+.sidebar form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar input {
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.sidebar-btn {
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar-btn:hover {
+    background-color: #ff7a7f;
+}
+
+.sidebar p {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.sidebar p a {
+    color: #ff5a5f;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.sidebar p a:hover {
+    color: #ff7a7f;
+}
+
+/* Sidebar Login and Register */
+.login-sidebar {
+    right: -100%; /* Start offscreen */
+}
+
+.register-sidebar {
+    right: -100%; /* Start offscreen */
+}
+
+/* Sidebar Open States */
+.sidebar-open {
+    right: 0; /* Slides in when open */
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
 }
 
 /* Footer */

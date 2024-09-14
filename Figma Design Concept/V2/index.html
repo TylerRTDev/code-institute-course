@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pump Fitness</title>
+    <title>Pump Fitness - Homepage</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" />
 </head>
@@ -20,15 +20,15 @@
     <div class="content-overlay">
         <header>
             <div class="header-container">
-                <h1>PUMP FITNESS</h1>
-                <button class="menu-icon">☰</button>
-                <div class="login-icon">👤</div>
+                <h1>|PUMP |FITNESS</h1>
+                <button class="menu-icon"><img src="/Images/menu.png" alt="menu-btn"></button>
+                <button class="login-icon"><img src="/Images/login.png" alt="login-btn"></button>
             </div>
         </header>
 
         <section class="hero">
             <div class="hero-content">
-                <h2>GET READY TO FEEL <br><span class="highlight">THE PUMP</span></h2>
+                <h2>GET READY TO |FEEL <br><span class="highlight">THE |PUMP</span></h2>
                 <button class="cta-button">Become A Member</button>
                 <div class="no-joining-fee">NO JOINING FEE!</div>
                 <!-- <form class="newsletter-form">
@@ -40,9 +40,9 @@
         </section>
 
         <section class="free-trial">
-            <h3>BOOK A FREE TRIAL!</h3>
-            <p>Experience the energy and excitement of Pump Fitness Gym with a free trial! Whether you're a fitness enthusiast or just starting your journey, our state-of-the-art facilities and friendly staff are here to support you.</p>
-            <p>Enjoy full access to our gym equipment, group classes, and personal training sessions. Discover the Pump Fitness community and see how we can help you achieve your fitness goals. Don't wait—take the first step towards a healthier, happier you!</p>
+            <h3>BOOK A |FREE TRIAL!</h3>
+            <p>Experience the energy and excitement of |Pump |Fitness Gym with a |free trial! Whether you're a |fitness enthusiast or just starting your journey, our state-of-the-art |facilities and |friendly staff are here to support you.</p>
+            <p>Enjoy |full access to our gym equipment, group classes, and |personal training sessions. Discover the |Pump |Fitness community and see how we can help you achieve your |fitness goals. Don't wait—take the |first step towards a healthier, happier you!</p>
             <a href="#" class="book-button">Click here to book!</a>
         </section>
 
@@ -59,7 +59,7 @@
                 </div>
                 <div class="feature">
                     <img src="/Figma Design Concept/Resources/Class.png" alt="Free Classes">
-                    <p>Free Classes</p>
+                    <p>|Free Classes</p>
                 </div>
                 <div class="feature">
                     <img src="/Figma Design Concept/Resources/Combat.png" alt="Combat Area">
@@ -67,7 +67,7 @@
                 </div>
                 <div class="feature">
                     <img src="/Figma Design Concept/Resources/PT.png" alt="Personal Trainers">
-                    <p>Personal Trainers</p>
+                    <p>|Personal Trainers</p>
                 </div>
             </div>
         </section>
@@ -83,5 +83,90 @@
         </div>
         <p>Copyright © Pump Fitness Gym Ltd 2024</p>
     </footer>
+
+    <!-- Sidebar for login -->
+    <div id="loginSidebar" class="sidebar login-sidebar">
+        <img src="/Images/close.png" alt="Close" class="close-btn">
+        <h2>LOGIN:</h2>
+        <form>
+            <label for="login-email">E-MAIL ADDRESS:</label>
+            <input type="email" id="login-email" placeholder="Email" required>
+            
+            <label for="login-password">PASSWORD:</label>
+            <input type="password" id="login-password" placeholder="Password" required>
+            
+            <button type="submit" class="sidebar-btn">Sign In</button>
+        </form>
+        <p>Not Registered Yet? <a href="#" id="toRegister">Click Here.</a></p>
+    </div>
+
+    <!-- Sidebar for register -->
+    <div id="registerSidebar" class="sidebar register-sidebar">
+        <img src="/Images/close.png" alt="Close" class="close-btn">
+        <h2>REGISTER</h2>
+        <form>
+            <label for="register-name">FULL NAME:</label>
+            <input type="text" id="register-name" placeholder="Name" required>
+            
+            <label for="register-email">E-MAIL ADDRESS:</label>
+            <input type="email" id="register-email" placeholder="E-mail" required>
+            
+            <label for="register-password">PASSWORD:</label>
+            <input type="password" id="register-password" placeholder="Password" required>
+            
+            <label for="confirm-password">CONFIRM PASSWORD:</label>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+            
+            <button type="submit" class="sidebar-btn">Register</button>
+        </form>
+        <p>Already Registered? <a href="#" id="toLogin">Click Here.</a></p>
+    </div>
+
+    <!-- JavaScript for toggling the sidebars -->
+    <script>
+        const loginIcon = document.querySelector('.login-icon');
+        const loginSidebar = document.getElementById('loginSidebar');
+        const registerSidebar = document.getElementById('registerSidebar');
+        const toRegisterLink = document.getElementById('toRegister');
+        const toLoginLink = document.getElementById('toLogin');
+        const closeButtons = document.querySelectorAll('.close-btn');
+
+        // Open login sidebar when clicking the login icon
+        loginIcon.addEventListener('click', () => {
+            loginSidebar.classList.add('sidebar-open');
+            registerSidebar.classList.remove('sidebar-open');
+        });
+
+        // Switch to register sidebar when "Click Here" is clicked
+        toRegisterLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginSidebar.classList.remove('sidebar-open');
+            registerSidebar.classList.add('sidebar-open');
+        });
+
+        // Switch to login sidebar when "Click Here" is clicked
+        toLoginLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            registerSidebar.classList.remove('sidebar-open');
+            loginSidebar.classList.add('sidebar-open');
+        });
+
+        // Close sidebars when clicking the close button
+        closeButtons.forEach(button => {
+        button.addEventListener('click', closeSidebars);
+        });
+
+        function closeSidebars() {
+            loginSidebar.classList.remove('sidebar-open');
+            registerSidebar.classList.remove('sidebar-open');
+        }
+
+        // Close sidebars when clicking outside of them
+        document.addEventListener('click', (e) => {
+            if (!loginSidebar.contains(e.target) && !registerSidebar.contains(e.target) && !loginIcon.contains(e.target)) {
+                closeSidebars();
+            }
+        });
+    </script>
 </body>
 </html>
