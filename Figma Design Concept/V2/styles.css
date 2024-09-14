@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', 'Arial', sans-serif;
+    text-transform: uppercase;
+}
+
+body, html {
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    display: flex;
+    flex-direction: column; /* Set body to use flexbox */
+}
+
+.background-video {
+    opacity: 90%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Stay behind all content */
+}
+
+.background-image {
+    opacity: 70%;
+    position: fixed;
+    background-size: 150%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Stay behind all content */
+}
+
+/* Content Overlay that floats over the video */
+.content-overlay {
+    position: relative;
+    z-index: 1; /* Ensures content is above the video */
+    flex: 1; /* Make content overlay take up the remaining space */
+}
+
+header {
+    background-color: #ffffff;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header-container h1 {
+    letter-spacing: -3px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 0;
+}
+
+.login-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 0;
+}
+
+.hero {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    position: relative;
+    color: white;
+    z-index: 1;
+    width: 100%;
+}
+
+.hero h2 {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 12.5px;
+    margin-bottom: 0.5rem;
+}
+
+.hero .highlight {
+    font-size: 6.5rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 1rem 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.cta-button:hover {
+    background-color: #ff7a7f;
+}
+
+.no-joining-fee {
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: 16px;
+    width: 35%;
+    color: #ff5a5f;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.529);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 1rem auto;
+}
+
+.subscribe-button {
+    padding: 1rem 2rem;
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.subscribe-button:hover {
+    background-color: #ff7a7f; /* Slightly lighter on hover */
+}
+
+.free-trial {
+    background-color: rgba(255, 255, 255, 0.529);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 45%;
+    margin: 2rem auto;
+}
+
+.free-trial h3 {
+    text-decoration: underline;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 300;
+}
+
+.free-trial p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #000000;
+}
+
+.book-button {
+    color: #ff5a5f;
+    text-decoration: none;
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #ff5a5f;
+    padding-bottom: 2px;
+}
+
+.book-button:hover {
+    color: #ff7a7f;
+    border-bottom-color: #ff7a7f;
+}
+
+.exclusive-access {
+    padding: 2rem;
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0px 350px;
+}
+
+.feature {
+    flex: 1;
+    max-width: 150px;
+    margin: 1rem;
+    text-align: center;
+}
+
+.feature img {
+    height: 100px;
+    width: 100px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #ffffff93;
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+footer .social-icons {
+    margin-bottom: 1rem;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
