@@ -77,6 +77,15 @@ header {
     font-weight: bold;
 }
 
+.header-container a, .hero-content a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.cta-button a {
+    color: #ffffff;
+}
+
 .menu-icon, .login-icon {
     background-color: rgba(255, 255, 255, 0);
     font-size: 1.5rem;
@@ -141,13 +150,13 @@ header {
     font-size: 5rem;
     font-weight: 300;
     letter-spacing: 16px;
-    width: 35%;
+    max-width: 1000px;
     color: #ff5a5f;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.529);
     padding: 1rem 2rem;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 20px rgb(0, 0, 0);
     display: block;
     margin: 1rem auto;
 }
@@ -174,7 +183,7 @@ header {
     padding: 2rem;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 20px rgb(0, 0, 0);
     max-width: 45%;
     margin: 2rem auto;
 }
@@ -235,7 +244,68 @@ header {
     width: 100px;
 }
 
+/* Menu Sidebar Specific Styles */
+.menu-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Initially hidden */
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-sidebar h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.menu-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-sidebar nav ul li {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.menu-sidebar nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu-sidebar nav ul li a:hover {
+    color: #ff5a5f;
+}
+
+.menu-sidebar .close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Menu Sidebar Open State */
+.left-sidebar-open {
+    left: 0; /* Slide in from the left */
+}
+
+
 /* Sidebar Common Styles */
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -314,7 +384,7 @@ header {
 }
 
 /* Sidebar Open States */
-.sidebar-open {
+.right-sidebar-open {
     right: 0; /* Slides in when open */
 }
 
