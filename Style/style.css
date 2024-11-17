@@ -1,3 +1,7 @@
+/* General Site Styles */
+
+/* General font, layout, and reset styles */
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
         *
         
@@ -10,487 +14,548 @@
             overflow-x: hidden;
         }
 
-        header {
-            padding: 0% 0%;
-            background-color: #ffffff;
-            letter-spacing: -3px;
-            text-align: center;
-            color: rgb(0, 0, 0);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
 
-        header img {
-            width: 30px;
-            height: 30px;
-        }
+/*--- Header Section ---*/
 
-        header h1 {
-            font-size: 3em;
-            text-transform: uppercase; 
-            font-style: oblique 60deg;
-            margin: 0px;
-        }
+header {
+    padding: 0% 0%;
+    background-color: #ffffff;
+    letter-spacing: -3px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
-        header a{
-            text-decoration: none;
-            color: #000000;
-        }
+header img {
+    width: 30px;
+    height: 30px;
+}
 
-        .login-btn {
-            background-color: white;
-            position: fixed;
-            top: 1.75%;
-            right: 10px;
-            z-index: 2200;
-            color: rgb(255, 255, 255);
-            cursor: pointer;
-            border: none;
-            margin: -15px auto;
-        }
+header h1 {
+    font-size: 3em;
+    text-transform: uppercase; 
+    font-style: oblique 60deg;
+    margin: 0px;
+}
 
-        .menu-btn {
-            background-color: white;
-            position: fixed;
-            top: 2%;
-            left: 10px;
-            z-index: 2200;
-            color: rgb(255, 255, 255);
-            cursor: grabbing;
-            border: none;
-            margin: -15px auto;
-        }
+header a{
+    text-decoration: none;
+    color: #000000;
+}
 
-        .menu-btn span, .login-btn span {
-            color: #000000;
-            margin: -13px;
-            text-align: center;
-            text-transform: uppercase;
-            font-weight: bold;
-        }
+header .login img {
+    width: 40px;
+    height: 40px;
+}
 
-        .close-btn {
-            left: 20px;
-        }
+/*--------------------------------------------*/
 
-        .right-close-btn {
-            right: 20px;
-        }
+/*--- Sidebar (Common Across Pages) ---*/
 
-        .menu-btn, .login-btn {
-            background-color: white;
-            position: fixed;
-            top: 2%;
-            z-index: 2200;
-            color: rgb(255, 255, 255);
-            cursor: grabbing;
-            border: none;
-        }
+.right-side {
+    position: fixed;
+    top: 0px;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    overflow-y: clip;
+    transition: right 0.3s;
+    z-index: 1050;
+    padding-top: 70px;
+    border-left: 1px solid #ccc;
+}
 
-        .close-btn, .right-close-btn {
-            position: absolute;
-            top: 20px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1.5em;
-            color: white;
-        }
+.login-btn {
+    background-color: white;
+    position: fixed;
+    top: 1.75%;
+    right: 10px;
+    z-index: 2200;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border: none;
+    margin: -15px auto;
+}
 
-        .right-close-btn img {
-            width: 30px;
-            height: 30px;
-        }
-        .close-btn img {
-            width: 30px;
-            height: 30px;
-        }
+.menu-btn {
+    background-color: white;
+    position: fixed;
+    top: 2%;
+    left: 10px;
+    z-index: 2200;
+    color: rgb(255, 255, 255);
+    cursor: grabbing;
+    border: none;
+    margin: -15px auto;
+}
 
-        header .login img {
-            width: 40px;
-            height: 40px;
-        }
-        nav {
-            position: fixed;
-            top: 0;
-            left: -250px;
-            width: 200px;
-            height: 100%;
-            background-color: #ffffff;
-            overflow-y: auto;
-            transition: left 0.3s;
-            z-index: 1050;
-            padding-top: 80px;
-            
-        }
+.menu-btn span, .login-btn span {
+    color: #000000;
+    margin: -13px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
 
-        .right-side {
-            position: fixed;
-            top: 0px;
-            right: -300px;
-            width: 300px;
-            height: 100%;
-            background-color: #ffffff;
-            overflow-y: clip;
-            transition: right 0.3s;
-            z-index: 1050;
-            padding-top: 70px;
-            border-left: 1px solid #ccc;
-        }
+.close-btn {
+    left: 20px;
+}
 
-        nav.open {
-            left: 0;
-        }
+.right-close-btn {
+    right: 20px;
+}
 
-        .right-side.open {
-            right: 0;
-        }
+.menu-btn, .login-btn {
+    background-color: white;
+    position: fixed;
+    top: 2%;
+    z-index: 2200;
+    color: rgb(255, 255, 255);
+    cursor: grabbing;
+    border: none;
+}
 
-        nav ul, .login-sidebar form {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+.right-side.open {
+    right: 0;
+}
 
-        nav ul li a, .login-sidebar label {
-            text-transform: uppercase;
-        }
+.login-sidebar form h1 {
+    text-align: center;
+    font-weight: 300;
+    font-style: oblique 60deg;
+    font-size: 3em;
+    text-transform: uppercase; 
+    margin: 0px;
+    color: #000000;
+}
 
-        nav ul li,.login-sidebar form div {
-            margin: 20px 0;
-            text-align: center;
-        }
+.login-sidebar input {
+    width: 86.2%;
+    padding: 10px;
+    margin: 10px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-        nav ul li a, .login-sidebar input, .login-sidebar button {
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            font-size: 1.2em;
-            display: block;
-            padding: 10px;
-        }
+.close-btn, .right-close-btn {
+    position: absolute;
+    top: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: white;
+}
 
-        nav ul li a:hover, .login-sidebar button:hover {
-            background-color: #ec4c4c;
-        }
+.right-close-btn img {
+    width: 30px;
+    height: 30px;
+}
+.close-btn img {
+    width: 30px;
+    height: 30px;
+}
 
-        .login-sidebar form h1 {
-            text-align: center;
-            font-weight: 300;
-            font-style: oblique 60deg;
-            font-size: 3em;
-            text-transform: uppercase; 
-            margin: 0px;
-            color: #000000;
-        }
+/*--------------------------------------------*/
 
-        .login-sidebar input {
-            width: 86.2%;
-            padding: 10px;
-            margin: 10px;
-            display: block;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        }
+/*--- Navigation Bar ---*/
 
-        .newsletter-container {
-            margin: 37px auto;
-            padding: 7px;
-            text-align: center;
-            text-transform: uppercase;
-            font-style: oblique 60deg;
-            background-color: #ec4c4c;
-            font-size: 1.5em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+nav {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    background-color: #ffffff;
+    overflow-y: auto;
+    transition: left 0.3s;
+    z-index: 1050;
+    padding-top: 80px;
+    
+}
 
-        .newsletter-container label {
-            margin: auto 10px;
-            display: inline-block;
-        }
+nav.open {
+    left: 0;
+}
 
-        #newsletter-email {
-            width: 10%;
-            padding: 7px;
-            display: inline;
-            border: 2px solid #000000bc;
-            border-radius: 9px;
-            box-shadow: 5px 5px 4px rgb(0, 0, 0);
-        }
+nav ul, .login-sidebar form {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-        .mid-container {
-            margin: auto;
-            margin-bottom: 250px;
-            width: 900px;
-            height: 500px;
-            background-color: #fff;
-            opacity: 80%;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            text-align: left;
-        }
+nav ul li a, .login-sidebar label {
+    text-transform: uppercase;
+}
 
-        .main-body-text {
-            text-align: center;
-            padding: 140px 40px 40px 40px;
-            overflow: auto;
-        }
+nav ul li,.login-sidebar form div {
+    margin: 20px 0;
+    text-align: center;
+}
 
-        .login-sidebar button, .main-content form button, .text a, .payment-btn {
-            width: auto;
-            background-color: #f65454;
-            color: white;
-            border: none;
-            padding: 10px 30px;
-            font-size: 1em;
-            cursor: pointer;
-            border-radius: 5px;
-            box-shadow: 5px 5px 4px rgb(0, 0, 0);
-            margin-top: 10px;
-            text-transform: uppercase;
-            display: inline-block;
-            text-decoration: none;
-            text-align: center;
-        }
+nav ul li a, .login-sidebar input, .login-sidebar button {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.2em;
+    display: block;
+    padding: 10px;
+}
 
-        .section {
-            padding-top: 100px;
-            flex: 1;
-            position: relative;
-            text-align: center;
-            color: rgb(0, 0, 0);
-            flex-direction: column;
-            justify-content: center;
-        }
+nav ul li a:hover, .login-sidebar button:hover {
+    background-color: #ec4c4c;
+}
 
-        .overlay {
-            position: absolute;
-            top:0;  
-            left:0;  
-            right:0;  
-            bottom:0;
-            background: rgba(255, 255, 255, 0.463);
-        }
+/*--------------------------------------------*/
 
-        .text {
-            text-transform: uppercase;
-        }
+/*--- Call To Action (Buttons) ---*/
+
+.login-sidebar button, .main-content form button, .text a, .payment-btn {
+    width: auto;
+    background-color: #f65454;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 5px 5px 4px rgb(0, 0, 0);
+    margin-top: 10px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+/*--------------------------------------------*/
+
+/*--- Styles Specific to Index Page ---*/
+
+video {
+    opacity: 70%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: -1;
+}
         
-        .text h3 {
-            font-stretch: extra-expanded;
-            font-size: 1.5em;
-            letter-spacing: 17px;
-            text-align: center;
-        }
+.section a:hover {
+    background-color: #aeaeae;
+}
 
-        .text h2 {
-            letter-spacing: -2px;
-            font-size: 9em;
-            line-height: 85%;
-            top: 20%;
-            margin-top: -1px;
-            margin-bottom: 10px;
-            text-align: center;
-        }
+.newsletter-container {
+    margin: 37px auto;
+    padding: 7px;
+    text-align: center;
+    text-transform: uppercase;
+    font-style: oblique 60deg;
+    background-color: #ec4c4c;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        #about-section-title {
-            text-align: center;
-            font-weight: 300;
-            font-style: oblique 60deg;
-            font-size: 3em;
-            text-transform: uppercase;
-            color: #fff;
-        }
+.newsletter-container label {
+    margin: auto 10px;
+    display: inline-block;
+}
 
-        .membership-container { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            justify-content: center; 
-            z-index: 1; 
-        }
-        
-        .membership-option { 
-            background-color: #fff; 
-            border: 1px solid #ccc; 
-            border-radius: 5px; 
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
-            margin: 10px 0; 
-            padding: 20px; 
-            text-align: left; 
-            width: 80%; 
-            max-width: 600px; 
-        }
-        
-        .membership-option h3 { 
-            font-size: 1.5em; 
-            margin: 0 0 10px; 
-        }
-        
-        .membership-option p { 
-            margin: 10px 0; 
-        }
-        
-        .membership-option label { 
-            display: flex; 
-            align-items: center; 
-            cursor: pointer; 
-        }
-        
-        .membership-option input[type="radio"] { 
-            margin-right: 10px; 
-        }
-        
-        .membership-option .price { 
-            font-size: 1.2em; 
-            font-weight: bold; 
-        }
+#newsletter-email {
+    width: 10%;
+    padding: 7px;
+    display: inline;
+    border: 2px solid #000000bc;
+    border-radius: 9px;
+    box-shadow: 5px 5px 4px rgb(0, 0, 0);
+}
+
+.mid-container {
+    margin: auto;
+    margin-bottom: 250px;
+    width: 900px;
+    height: 500px;
+    background-color: #fff;
+    opacity: 80%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.main-body-text {
+    text-align: center;
+    padding: 140px 40px 40px 40px;
+    overflow: auto;
+}
+
+.section {
+    padding-top: 100px;
+    flex: 1;
+    position: relative;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    flex-direction: column;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    top:0;  
+    left:0;  
+    right:0;  
+    bottom:0;
+    background: rgba(255, 255, 255, 0.463);
+}
+
+.text {
+    text-transform: uppercase;
+}
+
+.text h3 {
+    font-stretch: extra-expanded;
+    font-size: 1.5em;
+    letter-spacing: 17px;
+    text-align: center;
+}
+
+.text h2 {
+    letter-spacing: -2px;
+    font-size: 9em;
+    line-height: 85%;
+    top: 20%;
+    margin-top: -1px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#about-section-title {
+    text-align: center;
+    font-weight: 300;
+    font-style: oblique 60deg;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.section {
+    padding-top: 100px;
+    flex: 1;
+    position: relative;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    flex-direction: column;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    top:0;  
+    left:0;  
+    right:0;  
+    bottom:0;
+    background: rgba(255, 255, 255, 0.463);
+}
+
+.text {
+    text-transform: uppercase;
+}
+
+.text h3 {
+    font-stretch: extra-expanded;
+    font-size: 1.5em;
+    letter-spacing: 17px;
+    text-align: center;
+}
+
+.text h2 {
+    letter-spacing: -2px;
+    font-size: 9em;
+    line-height: 85%;
+    top: 20%;
+    margin-top: -1px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#about-section-title {
+    text-align: center;
+    font-weight: 300;
+    font-style: oblique 60deg;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/*--------------------------------------------*/
+
+/*--- Styles Specific to Membership Page ---*/
+
+.membership-container { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    z-index: 1; 
+}
+
+.membership-option { 
+    background-color: #fff; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    margin: 10px 0; 
+    padding: 20px; 
+    text-align: left; 
+    width: 80%; 
+    max-width: 600px; 
+}
+
+.membership-option h3 { 
+    font-size: 1.5em; 
+    margin: 0 0 10px; 
+}
+
+.membership-option p { 
+    margin: 10px 0; 
+}
+
+.membership-option label { 
+    display: flex; 
+    align-items: center; 
+    cursor: pointer; 
+}
+
+.membership-option input[type="radio"] { 
+    margin-right: 10px; 
+}
+
+.membership-option .price { 
+    font-size: 1.2em; 
+    font-weight: bold; 
+}
 
 
-        .main-content {
-            padding: 50px 0 0 0;
-            color: #000000;
-            height: 90vh;
-            flex: 1;
-            text-align: center;
-            z-index: 2;
-        }
+.main-content {
+    padding: 50px 0 0 0;
+    color: #000000;
+    height: 90vh;
+    flex: 1;
+    text-align: center;
+    z-index: 2;
+}
 
-        .main-content h2 {
-            margin-top: 50px;
-            font-size: 3em;
-            font-style: oblique 60deg;
-            text-transform: uppercase; 
-            color: #000000;
-            font-weight: 400;
-        }
+.main-content h2 {
+    margin-top: 50px;
+    font-size: 3em;
+    font-style: oblique 60deg;
+    text-transform: uppercase; 
+    color: #000000;
+    font-weight: 400;
+}
 
-        .bg-image-membership {
-            opacity: 70%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
+.bg-image-membership {
+    opacity: 70%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
 
-        #contact-form legend, .location h3 {
-            padding-top: 1%;
-            font-size: 3em;
-            font-style: oblique 60deg;
-            text-transform: uppercase; 
-            margin: 0px;
-            color: #000000;
-        }
+/*--------------------------------------------*/
 
-        .location h3 {
-            padding: 30px 0 30px 0;
-            font-size: 2em;
-            font-weight: 400;
-            font-style: oblique 60deg;
-            text-transform: uppercase; 
-            margin: 0px;
-            color: #000000;
-        }
-        
-        #contact-form label {
-            text-transform: uppercase;
-            color: rgb(0, 0, 0);
-            font-size: 1.2em;
-            display: block;
-            padding: 10px;
-            margin: 10px auto;
-        }
+/*--- Styles Specific to Contact Page ---*/
 
-        #contact-form input, #contact-form textarea {
-            color: rgb(0, 0, 0);
-            font-size: 1.2em;
-            display: block;
-            padding: 10px;
-            margin: 10px auto;
-        }
+.location h3 {
+    padding: 30px 0 30px 0;
+    font-size: 2em;
+    font-weight: 400;
+    font-style: oblique 60deg;
+    text-transform: uppercase; 
+    margin: 0px;
+    color: #000000;
+}
 
-        
-        #contact-form input, #contact-form textarea {
-            width: 15%;
-            border: 1px solid #000000;
-            border-radius: 5px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        }
+#contact-form label {
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+    display: block;
+    padding: 10px;
+    margin: 10px auto;
+}
 
-        .video-background {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: 0;
-            transform: translate(-50%, -50%);
-            background-size: cover;
-        }
+#contact-form input, #contact-form textarea {
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+    display: block;
+    padding: 10px;
+    margin: 10px auto;
+}
 
-        .bg-image-contact {
-            opacity: 60%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
 
-        video {
-            opacity: 70%;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            overflow: hidden;
-            z-index: -1;
-        }
-                
-        .section a:hover {
-            background-color: #aeaeae;
-        }
+#contact-form input, #contact-form textarea {
+    width: 15%;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-        .social-links {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #ffffff;
-        }
+.bg-image-contact {
+    opacity: 60%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
 
-        .social-links a {
-            display: inline;
-            margin: 0 5px;
-        }
+/*--------------------------------------------*/
 
-        .social-links img {
-            width: 30px;
-            height: 30px;
-        }
+/*--- Footer Section ---*/
 
-        .wrapper-footer {
-            margin: 10px;
-            display: flex;
-            align-items: center;
-        }
-        
-        footer {
-            padding: 15px;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            z-index: 1;
-            width: 100%;
-            position: relative;
-            bottom: 0;
-        }
+.social-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.social-links a {
+    display: inline;
+    margin: 0 5px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+}
+
+.wrapper-footer {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+/*--------------------------------------------*/
