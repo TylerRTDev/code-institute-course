@@ -11,12 +11,14 @@
 </head>
 
 <body>
+    <!-- Header Section -->
     <header>
         <h1 id="logo"><a href="index.html">Pump Fitness</a></h1>
         <button class="menu-btn"><img src="Images/menu.png" alt="menu button"><span>Menu</span></button>
         <button class="login-btn"><img src="Images/login.png" alt="login button"><span>Login</span></button>
     </header>
     
+    <!-- Nav Menu Sidebar -->
     <nav id="side-menu-left">
         <button class="close-btn"><img src="Images/close.png" alt="close menu button"></button>
         <div id="side-menu-bar" class="sidebar">
@@ -28,8 +30,11 @@
         </div>
     </nav>
 
+    <!-- Login/Register Sidebar -->
     <div class="right-side" id="side-menu-right">
         <button class="right-close-btn"><img src="Images/close.png" alt="close menu button"></button>
+
+        <!-- Login Sidebar -->
         <div id="login-side-menu-bar" class="login-sidebar">
                 <form method="POST" action="https://formdump.codeinstitue.net/">
                         <h1>Login:</h1>
@@ -49,6 +54,7 @@
                     </div>
                 </form>
 
+                <!-- Register Sidebar -->
                 <form method="POST" action="https://formdump.codeinstitue.net/" id="registration-form" style="display:none;">
                         <h1>Register:</h1>
                     <div>
@@ -77,12 +83,14 @@
         </div>
     </div>
 
+    <!-- Video Background Overlay -->
     <div class="overlay">
         <video autoplay muted loop controls>
             <source src="Videos/gym_video.mp4" type="video/mp4">
         </video>
     </div>
 
+    <!-- Hero Section -->
     <div class="section">
         <div class="text">
             <h3 style="color: #ec4c4c;">Are You Ready To Feel</h3>
@@ -103,6 +111,7 @@
         </div>
     </div>
 
+    <!-- Footer Section -->
     <footer class="social-links">
         <div class="wrapper-footer">
             <span>More Pump Here:</span>
@@ -118,30 +127,6 @@
         </div>
     </footer>
 
-    <script>
-        document.querySelector('.menu-btn').addEventListener('click', function() {
-            document.getElementById('side-menu-left').classList.toggle('open');
-        });
-        document.querySelector('.close-btn').addEventListener('click', function() {
-            document.getElementById('side-menu-left').classList.remove('open');
-        });
-        document.querySelector('.login-btn').addEventListener('click', function() {
-            document.getElementById('side-menu-right').classList.toggle('open');
-        });
-        document.querySelector('.right-close-btn').addEventListener('click', function() {
-            document.getElementById('side-menu-right').classList.remove('open');
-        });
-
-        document.querySelector('.show-registration').addEventListener('click', function(e) {
-            e.preventDefault();
-            document.getElementById('registration-form').style.display = 'block';
-            document.querySelector('form').style.display = 'none';
-        });
-        document.querySelector('.show-login').addEventListener('click', function(e) {
-            e.preventDefault();
-            document.getElementById('registration-form').style.display = 'none';
-            document.querySelector('form').style.display = 'block';
-        });
-    </script>
+    <script src="./Style/script.js"></script>
 </body>
 </html>
