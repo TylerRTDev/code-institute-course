@@ -131,35 +131,6 @@
         </div>
     </footer>
 
-    <script>
-        document.querySelector('.menu-btn').addEventListener('click', function() {
-            document.getElementById('side-menu-left').classList.toggle('open');
-        });
-        document.querySelector('.close-btn').addEventListener('click', function() {
-            document.getElementById('side-menu-left').classList.remove('open');
-        });
-        document.querySelector('.login-btn').addEventListener('click', function() {
-            document.getElementById('side-menu-right').classList.toggle('open');
-        });
-        document.querySelector('.right-close-btn').addEventListener('click', function() {
-            document.getElementById('side-menu-right').classList.remove('open');
-        });
-
-        /*This function will call the .show-registartion class (inside of <a> tag)
-        when 'Sign Up' is clicked. It then looks for the form element by ID (registration-form)
-        The form is initially hidden 'style,display,none' but will be displayed on-click
-        'style,display,block'
-        */
-        document.querySelector('.show-registration').addEventListener('click', function(e) {
-            e.preventDefault();
-            document.getElementById('registration-form').style.display = 'block';
-            document.querySelector('form').style.display = 'none';
-        });
-        document.querySelector('.show-login').addEventListener('click', function(e) {
-            e.preventDefault();
-            document.getElementById('registration-form').style.display = 'none';
-            document.querySelector('form').style.display = 'block';
-        });
-    </script>
+    <script src="./Style/script.js"></script>
 </body>
 </html>
