@@ -8,7 +8,7 @@
 html, body {
     margin: 0;
     font-family: Oswald, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #ffffff60;
     color: #333;
 }
 
@@ -234,9 +234,9 @@ nav ul li a:hover, .login-sidebar button:hover {
 /*--- Styles Specific to Index Page ---*/
 
 video {
-    opacity: 70%;
+    opacity: 60%;
     width: 100%;
-    height: 100%;
+    min-height: 125vh;
     object-fit: cover;
     overflow: hidden;
     z-index: -1;
@@ -294,14 +294,18 @@ video {
 .section {
     /* background: url('/code-institute-course/Images/memebrship.jpg'); */
     padding-top: 100px;
-    flex: 1;
     position: relative;
     text-align: center;
     color: rgb(0, 0, 0);
     flex-direction: column;
     justify-content: center;
-    min-height: 100vh;
 }
+
+/* @media ((min-height: 1000px)) {
+    .section {
+        max-height: 90vh;
+    }
+} */
 
 .overlay {
     position: absolute;
@@ -309,11 +313,11 @@ video {
     left:0;  
     right:0;  
     bottom:0;
-    background: rgba(255, 255, 255, 0.463);
 }
 
 .text {
     text-transform: uppercase;
+    z-index: -1;
 }
 
 .text h3 {
