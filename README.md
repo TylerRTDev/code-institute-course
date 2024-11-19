@@ -20,9 +20,17 @@ The primary purpose of this website is to:
 The website will offers significant value to users - both visitors and members by:
 
 - Providing comprehensive information about gym services and membership plans.
+    - ![gym pricing](/Images/pricing-plan.png)
+
 - Allowing users to conveniently register for memberships online.
+    - ![user registration](/Images/registration.png)
+
 - Enabling users to easily contact the gym and find its location.
+    - ![gym location](/Images/gym-location.png)
+
 - Connecting users with the gym's social media profiles for updates and community engagement.
+    - ![social media links](/Images/social-media-links.png)
+
 
 ### Deployment Procedure
 
