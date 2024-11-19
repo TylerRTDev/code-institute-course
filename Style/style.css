@@ -5,14 +5,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
         *
         
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: Oswald, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-            overflow-x: hidden;
-        }
+html, body {
+    height: 100vh;
+    margin: 0;
+    font-family: Oswald, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    overflow-x: hidden;
+}
 
 
 /*--- Header Section ---*/
@@ -396,12 +396,13 @@ video {
 
 /*--- Styles Specific to Membership Page ---*/
 
+
 .membership-container { 
     display: flex; 
     flex-direction: column; 
     align-items: center; 
-    justify-content: center; 
-    z-index: 1; 
+    justify-content: flex-start;
+    min-height: 100vh;
 }
 
 .membership-option { 
