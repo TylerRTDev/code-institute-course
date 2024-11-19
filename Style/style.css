@@ -12,7 +12,6 @@ html, body {
     color: #333;
 }
 
-
 /*--- Header Section ---*/
 
 header {
@@ -293,6 +292,7 @@ video {
 }
 
 .section {
+    /* background: url('/code-institute-course/Images/memebrship.jpg'); */
     padding-top: 100px;
     flex: 1;
     position: relative;
@@ -300,6 +300,7 @@ video {
     color: rgb(0, 0, 0);
     flex-direction: column;
     justify-content: center;
+    min-height: 100vh;
 }
 
 .overlay {
@@ -341,17 +342,6 @@ video {
     color: #fff;
 }
 
-.section {
-    padding-top: 100px;
-    flex: 1;
-    position: relative;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
-}
-
 .overlay {
     position: absolute;
     top:0;  
@@ -359,6 +349,7 @@ video {
     right:0;  
     bottom:0;
     background: rgba(255, 255, 255, 0.463);
+    min-height: 100vh;
 }
 
 .text {
