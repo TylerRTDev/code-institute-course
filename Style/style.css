@@ -252,7 +252,7 @@ video {
     text-align: center;
     text-transform: uppercase;
     font-style: oblique 60deg;
-    background-color: #ec4c4c;
+    background-color: #ec4c4ca3;
     font-size: 1.5em;
     display: flex;
     justify-content: center;
@@ -291,14 +291,19 @@ video {
     overflow: auto;
 }
 
+.cover {
+    
+}
+
 .section {
-    /* background: url('/code-institute-course/Images/memebrship.jpg'); */
+    background: url('/code-institute-course/Images/homepage.jpg') top;
     padding-top: 100px;
     position: relative;
     text-align: center;
     color: rgb(0, 0, 0);
     flex-direction: column;
     justify-content: center;
+    min-height: 100vh;
 }
 
 /* @media ((min-height: 1000px)) {
