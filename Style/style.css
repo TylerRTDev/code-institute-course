@@ -274,10 +274,8 @@ video {
 }
 
 .mid-container {
-    margin: auto;
-    margin-bottom: 250px;
-    width: 900px;
-    height: 500px;
+    margin: 100px auto;
+    max-width: 60%;
     background-color: #fff;
     opacity: 80%;
     border: 1px solid #ccc;
@@ -286,13 +284,14 @@ video {
 }
 
 .main-body-text {
+    margin: 0;
     text-align: center;
-    padding: 140px 40px 40px 40px;
+    padding: 40px;
     overflow: auto;
 }
 
-.cover {
-    
+.main-body-text p {
+    padding: 10px;
 }
 
 .section {
@@ -305,12 +304,6 @@ video {
     justify-content: center;
     min-height: 100vh;
 }
-
-/* @media ((min-height: 1000px)) {
-    .section {
-        max-height: 90vh;
-    }
-} */
 
 .overlay {
     position: absolute;
@@ -325,13 +318,6 @@ video {
     z-index: -1;
 }
 
-.text h3 {
-    font-stretch: extra-expanded;
-    font-size: 1.5em;
-    letter-spacing: 17px;
-    text-align: center;
-}
-
 .text h2 {
     letter-spacing: -2px;
     font-size: 9em;
@@ -340,15 +326,6 @@ video {
     margin-top: -1px;
     margin-bottom: 10px;
     text-align: center;
-}
-
-#about-section-title {
-    text-align: center;
-    font-weight: 300;
-    font-style: oblique 60deg;
-    font-size: 3em;
-    text-transform: uppercase;
-    color: #fff;
 }
 
 .overlay {
@@ -372,23 +349,31 @@ video {
     text-align: center;
 }
 
-.text h2 {
-    letter-spacing: -2px;
-    font-size: 9em;
-    line-height: 85%;
-    top: 20%;
-    margin-top: -1px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
 #about-section-title {
     text-align: center;
-    font-weight: 300;
+    font-weight: 600;
     font-style: oblique 60deg;
     font-size: 3em;
     text-transform: uppercase;
-    color: #fff;
+    color: #000000;
+}
+
+@media (max-height: 980px) {
+    .section {
+        padding-bottom: 10px; /* Reduce padding to avoid gap */
+    }
+    .membership-container {
+        padding: 10px 0; /* Adjust inner container padding */
+    }
+}
+
+@media (max-height: 1030px) {
+    .section {
+        padding-bottom: 10px; /* Reduce padding to avoid gap */
+    }
+    .membership-container {
+        padding: 10px 0; /* Adjust inner container padding */
+    }
 }
 
 /*--------------------------------------------*/
@@ -536,6 +521,7 @@ video {
 /*--- Footer Section ---*/
 
 .social-links {
+
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -560,6 +546,5 @@ video {
     display: flex;
     align-items: center;
 }
-
 
 /*--------------------------------------------*/
