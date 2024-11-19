@@ -6,12 +6,10 @@
         *
         
 html, body {
-    height: 100vh;
     margin: 0;
     font-family: Oswald, sans-serif;
     background-color: #f5f5f5;
     color: #333;
-    overflow-x: hidden;
 }
 
 
@@ -351,6 +349,7 @@ video {
     color: rgb(0, 0, 0);
     flex-direction: column;
     justify-content: center;
+    min-height: 100vh;
 }
 
 .overlay {
