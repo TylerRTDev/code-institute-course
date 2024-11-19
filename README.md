@@ -266,13 +266,13 @@ Testing has shown that the Pump Fitness Gym website performs well in most areas,
 <details>
 <summary>HTML</summary>
 
-
+![HTML Validation Image](Images/html-checker.png)
 </details>
 <br>
 <details>
 <summary>CSS</summary>
 
-
+![CSS Validation Image](Images/css-checker.png)
 </details>
 
 ## External References
