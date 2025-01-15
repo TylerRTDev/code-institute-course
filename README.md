@@ -1,6 +1,6 @@
 # Pump Fitness Gym Website
 
-Link To Website: https://tylerrtdev.github.io/code-institute-course/ (Currently offline)
+Link To Website: https://tylerrtdev.github.io/code-institute-course/
 
 ### Overview
 
